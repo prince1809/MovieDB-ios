@@ -54,14 +54,22 @@
 		A3C86247232AA364000CF79B /* MovieDB */ = {
 			isa = PBXGroup;
 			children = (
+				A3C8625A232AA934000CF79B /* Storyboards */,
 				A3C86248232AA364000CF79B /* AppDelegate.swift */,
 				A3C8624A232AA364000CF79B /* ViewController.swift */,
-				A3C8624C232AA364000CF79B /* Main.storyboard */,
 				A3C8624F232AA366000CF79B /* Assets.xcassets */,
-				A3C86251232AA366000CF79B /* LaunchScreen.storyboard */,
 				A3C86254232AA366000CF79B /* Info.plist */,
 			);
 			path = MovieDB;
+			sourceTree = "<group>";
+		};
+		A3C8625A232AA934000CF79B /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				A3C8624C232AA364000CF79B /* Main.storyboard */,
+				A3C86251232AA366000CF79B /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
