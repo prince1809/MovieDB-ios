@@ -60,14 +60,26 @@
             </objects>
             <point key="canvasLocation" x="1555.072463768116" y="-335.49107142857139"/>
         </scene>
-        <!--View Controller-->
+        <!--Splash View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MovieDB" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SplashViewController" customModule="MovieDB" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello World" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ecd-PB-NT9">
+                                <rect key="frame" x="122.5" y="427.5" width="169" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ecd-PB-NT9" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="FDw-t0-paf"/>
+                            <constraint firstItem="ecd-PB-NT9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="I1U-I9-y0J"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="wyK-Aa-F1X"/>
@@ -76,11 +88,11 @@
             </objects>
             <point key="canvasLocation" x="547.82608695652175" y="-348.21428571428572"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="j6G-5R-Ia5">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qke-uS-Ez9" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="1i4-Pz-KOL"/>
+                    <tabBarItem key="tabBarItem" title="" id="1i4-Pz-KOL"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zyE-gp-9hR">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -101,6 +113,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="xpK-nc-wfT" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Se9-ft-Om5">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
