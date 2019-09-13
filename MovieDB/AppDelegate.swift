@@ -14,6 +14,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     var storyboard: UIStoryboard!
     
+    //private var currentTabBarSelectedIndex: Main
+    
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -21,7 +23,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
+        guard let shortcut = AppShortcutItem(rawValue: shortcutItem.type) else { return }
         
+//        switch shortcut {
+//        case .searchMovies:
+//           // currentTabBarSelectedIndex = .sea
+//        }
     }
     
     

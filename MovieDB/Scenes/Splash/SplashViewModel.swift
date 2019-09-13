@@ -10,7 +10,7 @@ import Foundation
 import CoreData
 
 final class SplashViewModel {
-    
+    //private let 
     
     
 }
