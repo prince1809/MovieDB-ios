@@ -17,7 +17,19 @@
                     <view key="view" contentMode="scaleToFill" id="mJR-Jx-DPR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g5K-00-Io2">
+                                <rect key="frame" x="149" y="421.5" width="116.5" height="53"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="44"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="g5K-00-Io2" firstAttribute="centerY" secondItem="mJR-Jx-DPR" secondAttribute="centerY" id="XMy-d4-RXt"/>
+                            <constraint firstItem="g5K-00-Io2" firstAttribute="centerX" secondItem="mJR-Jx-DPR" secondAttribute="centerX" id="rag-ex-FP6"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Rs9-dp-Kyw"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="IMd-C2-9fy"/>
@@ -33,7 +45,19 @@
                     <view key="view" contentMode="scaleToFill" id="van-Op-ayz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o97-as-POV">
+                                <rect key="frame" x="151" y="421.5" width="112" height="53"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="44"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="o97-as-POV" firstAttribute="centerX" secondItem="van-Op-ayz" secondAttribute="centerX" id="1Qj-pN-LIG"/>
+                            <constraint firstItem="o97-as-POV" firstAttribute="centerY" secondItem="van-Op-ayz" secondAttribute="centerY" id="Z6C-CT-zkV"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="IdW-5j-rp3"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="jqJ-Gc-5sS"/>
@@ -42,10 +66,10 @@
             </objects>
             <point key="canvasLocation" x="2755.072463768116" y="-672.99107142857144"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Main Tab Bar Controller-->
         <scene sceneID="LHM-rm-F6m">
             <objects>
-                <tabBarController id="83L-Pt-qeN" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainTabBarController" id="83L-Pt-qeN" customClass="MainTabBarController" customModule="MovieDB" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="K6b-Po-mCm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

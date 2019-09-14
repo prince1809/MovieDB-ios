@@ -17,8 +17,30 @@ class MainTabBarController: UITabBarController {
         super.viewDidLoad()
         delegate = self
     }
+    
+    // MARK: - Public
+    
+    func setSelectedIndex(_ index: Int) {
+        selectedIndex = index
+        currentSelectedItemIndex = selectedIndex
+    }
 }
+
+// MARK: UITabBarControllerDelegate
 
 extension MainTabBarController: UITabBarControllerDelegate {
     
+    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+        
+    }
+}
+
+// MARK: TabBar Items
+extension MainTabBarController {
+    
+    enum Items: Int {
+        case upcomingMovies
+        case searchMovies
+        case favoriteMovies
+    }
 }

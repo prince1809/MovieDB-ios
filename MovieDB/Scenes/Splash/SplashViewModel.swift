@@ -10,7 +10,9 @@ import Foundation
 import CoreData
 
 final class SplashViewModel {
-    //private let 
+    //private let
+    
+    var genresFetched: (() -> Void)?
     
     
 }

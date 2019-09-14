@@ -6,4 +6,14 @@
 //  Copyright © 2019 Prince Kumar. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+extension UIViewController {
+    
+    var appDelegate: AppDelegate? {
+        guard let delegate = UIApplication.shared.delegate as? AppDelegate else {
+            return nil
+        }
+        return delegate
+    }
+}
