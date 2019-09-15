@@ -16,4 +16,15 @@ extension UIViewController {
         }
         return delegate
     }
+    
+    func add(asChildViewController viewController: UIViewController) {
+        addChild(viewController)
+        
+        view.addSubview(viewController.view)
+        
+        viewController.view.frame = view.bounds
+        viewController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        
+        viewController.didMove(toParent: self)
+    }
 }

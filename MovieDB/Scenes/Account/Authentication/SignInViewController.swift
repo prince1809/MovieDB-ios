@@ -8,12 +8,23 @@
 
 import UIKit
 
+protocol SignInViewControllerDelegate: class {
+    
+    func signInViewController(_ signInViewController: SignInViewController, didTapSignInButton tapped: Bool)
+    
+}
+
 class SignInViewController: UIViewController {
+    
+    weak var delegate: SignInViewControllerDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    }
+    
+    // MARK: - Public
+    func startLoading() {
+        print("SignInViewController loaded")
     }
 
 }

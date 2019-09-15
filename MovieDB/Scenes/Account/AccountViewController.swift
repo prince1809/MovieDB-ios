@@ -9,11 +9,45 @@
 import UIKit
 
 class AccountViewController: UIViewController {
-
+    
+    private lazy var signInViewController: SignInViewController = {
+        var viewController = self.storyboard?.instantiateViewController(withIdentifier: "LoginViewController") as! SignInViewController
+        viewController.delegate = self
+        self.add(asChildViewController: viewController)
+        return viewController
+    }()
+    
     override func viewDidLoad() {
+        print("view loaded")
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setupUI()
     }
-
+    
+    // MARK: - Private
+    
+    private func setupUI() {
+        setupContainerView()
+    }
+    
+    private func setupContainerView() {
+        showSignInView()
+    }
+    
+    private func showSignInView(withAnimatedNavigationBar animated: Bool = false) {
+        add(asChildViewController: signInViewController)
+    }
 }
+
+
+// MARK: - SignInViewControllerDelegate
+
+extension AccountViewController: SignInViewControllerDelegate {
+    
+    func signInViewController(_ signInViewController: SignInViewController, didTapSignInButton tapped: Bool) {
+        signInViewController.startLoading()
+    }
+    
+    
+}
+
+
