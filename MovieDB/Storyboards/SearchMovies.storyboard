@@ -38,11 +38,13 @@
             </objects>
             <point key="canvasLocation" x="918.84057971014499" y="298.66071428571428"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Search-->
         <scene sceneID="AQe-No-ltr">
             <objects>
                 <navigationController storyboardIdentifier="SearchMoviesNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="liQ-PN-fFt" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Search" image="Search" id="uCy-fO-roH"/>
                     <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uG5-L3-1pU">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -57,4 +59,7 @@
             <point key="canvasLocation" x="8.6956521739130448" y="298.66071428571428"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Search" width="25" height="25"/>
+    </resources>
 </document>

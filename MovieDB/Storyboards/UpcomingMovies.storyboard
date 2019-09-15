@@ -38,11 +38,13 @@
             </objects>
             <point key="canvasLocation" x="563.768115942029" y="75"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Upcoming-->
         <scene sceneID="bKQ-h2-Yf0">
             <objects>
                 <navigationController storyboardIdentifier="UpcomingMoviesNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="kr2-GI-v4B" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Upcoming" image="Movies" id="wHA-ui-WMw"/>
                     <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kx8-SI-3aB">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -57,4 +59,7 @@
             <point key="canvasLocation" x="-346.37681159420293" y="75"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Movies" width="25" height="25"/>
+    </resources>
 </document>
