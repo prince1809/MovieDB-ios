@@ -53,6 +53,8 @@ class GradientView: UIView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
+        updatePoints()
+        updateLocations()
         updateColors()
     }
     

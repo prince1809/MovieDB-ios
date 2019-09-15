@@ -16,6 +16,8 @@ protocol SignInViewControllerDelegate: class {
 
 class SignInViewController: UIViewController {
     
+    @IBOutlet weak var signInButton: ShrinkingButton!
+    
     weak var delegate: SignInViewControllerDelegate?
 
     override func viewDidLoad() {
@@ -24,7 +26,12 @@ class SignInViewController: UIViewController {
     
     // MARK: - Public
     func startLoading() {
-        print("SignInViewController loaded")
+        //signInButton.start
     }
 
+    // MARK: - Actions
+    
+    @IBAction func loginButtonAction(_ sender: Any) {
+        delegate?.signInViewController(self, didTapSignInButton: true)
+    }
 }

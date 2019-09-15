@@ -44,6 +44,9 @@
                                         <state key="normal" title="Sign In with TheMovieDB">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="loginButtonAction:" destination="TGt-5a-Q8z" eventType="touchUpInside" id="QdU-zi-pWl"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -70,6 +73,9 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
+                    <connections>
+                        <outlet property="signInButton" destination="qrY-Hv-MsN" id="WNo-xz-xv2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GWO-h1-xIs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
