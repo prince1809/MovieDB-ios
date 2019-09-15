@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		A32D831E232E45BC005AB288 /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A32D831D232E45BC005AB288 /* Account.storyboard */; };
 		A32D8321232E464A005AB288 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32D8320232E464A005AB288 /* AccountViewController.swift */; };
+		A32D8324232E4BD9005AB288 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32D8323232E4BD9005AB288 /* SignInViewController.swift */; };
+		A32D8329232E4F2C005AB288 /* ShrinkingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32D8328232E4F2C005AB288 /* ShrinkingButton.swift */; };
+		A32D832C232E516E005AB288 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32D832B232E516E005AB288 /* GradientView.swift */; };
 		A392632C232D10880052238C /* UpcomingMovies.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A392632B232D10880052238C /* UpcomingMovies.storyboard */; };
 		A392632E232D11240052238C /* MovieDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A392632D232D11240052238C /* MovieDetail.storyboard */; };
 		A3926332232D14600052238C /* UpcomingMoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3926331232D14600052238C /* UpcomingMoviesViewController.swift */; };
@@ -28,6 +31,9 @@
 /* Begin PBXFileReference section */
 		A32D831D232E45BC005AB288 /* Account.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Account.storyboard; sourceTree = "<group>"; };
 		A32D8320232E464A005AB288 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		A32D8323232E4BD9005AB288 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		A32D8328232E4F2C005AB288 /* ShrinkingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShrinkingButton.swift; sourceTree = "<group>"; };
+		A32D832B232E516E005AB288 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		A392632B232D10880052238C /* UpcomingMovies.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UpcomingMovies.storyboard; sourceTree = "<group>"; };
 		A392632D232D11240052238C /* MovieDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MovieDetail.storyboard; sourceTree = "<group>"; };
 		A3926331232D14600052238C /* UpcomingMoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingMoviesViewController.swift; sourceTree = "<group>"; };
@@ -60,9 +66,51 @@
 		A32D831F232E4633005AB288 /* Account */ = {
 			isa = PBXGroup;
 			children = (
+				A32D8322232E4BB5005AB288 /* Authentication */,
 				A32D8320232E464A005AB288 /* AccountViewController.swift */,
 			);
 			path = Account;
+			sourceTree = "<group>";
+		};
+		A32D8322232E4BB5005AB288 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				A32D8323232E4BD9005AB288 /* SignInViewController.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		A32D8325232E4EF6005AB288 /* ViewComponents */ = {
+			isa = PBXGroup;
+			children = (
+				A32D832A232E5157005AB288 /* CustomViews */,
+				A32D8326232E4F00005AB288 /* Buttons */,
+			);
+			path = ViewComponents;
+			sourceTree = "<group>";
+		};
+		A32D8326232E4F00005AB288 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				A32D8327232E4F09005AB288 /* Shrinking Button */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		A32D8327232E4F09005AB288 /* Shrinking Button */ = {
+			isa = PBXGroup;
+			children = (
+				A32D8328232E4F2C005AB288 /* ShrinkingButton.swift */,
+			);
+			path = "Shrinking Button";
+			sourceTree = "<group>";
+		};
+		A32D832A232E5157005AB288 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				A32D832B232E516E005AB288 /* GradientView.swift */,
+			);
+			path = CustomViews;
 			sourceTree = "<group>";
 		};
 		A392632F232D14230052238C /* Movies */ = {
@@ -109,6 +157,7 @@
 		A3C86247232AA364000CF79B /* MovieDB */ = {
 			isa = PBXGroup;
 			children = (
+				A32D8325232E4EF6005AB288 /* ViewComponents */,
 				A3F8C819232BE9C2002CFEA4 /* Scenes */,
 				A3C8625A232AA934000CF79B /* Storyboards */,
 				A3F8C81D232BF167002CFEA4 /* Helpers */,
@@ -262,12 +311,15 @@
 			files = (
 				A3F8C820232BF183002CFEA4 /* AppShortcutItem.swift in Sources */,
 				A3F8C81C232BEEE0002CFEA4 /* SplashViewModel.swift in Sources */,
+				A32D832C232E516E005AB288 /* GradientView.swift in Sources */,
 				A3926332232D14600052238C /* UpcomingMoviesViewController.swift in Sources */,
 				A3C8624B232AA364000CF79B /* SplashViewController.swift in Sources */,
 				A3F8C823232BF5A5002CFEA4 /* MainTabBarControlller.swift in Sources */,
+				A32D8329232E4F2C005AB288 /* ShrinkingButton.swift in Sources */,
 				A3E74CDF232C7A39002D75A3 /* UIViewController+Extensions.swift in Sources */,
 				A3926337232D18AE0052238C /* SearchMoviesViewController.swift in Sources */,
 				A3C86249232AA364000CF79B /* AppDelegate.swift in Sources */,
+				A32D8324232E4BD9005AB288 /* SignInViewController.swift in Sources */,
 				A32D8321232E464A005AB288 /* AccountViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
