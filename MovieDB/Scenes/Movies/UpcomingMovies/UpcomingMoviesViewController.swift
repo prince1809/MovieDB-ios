@@ -23,6 +23,10 @@ class UpcomingMoviesViewController: UIViewController {
     private var navigationManager: UpcomingMoviesNavigationManager!
     
     
+    private var isAnimatingPresentation: Bool = false
+//    private var presentationMode:
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -97,6 +101,25 @@ class UpcomingMoviesViewController: UIViewController {
 
 extension UpcomingMoviesViewController: UICollectionViewDelegate {
     
+}
+
+// MARK: - Presentation Modes
+
+extension UpcomingMoviesViewController {
+    
+    enum PresentationMode {
+        case preview
+        case detail
+        
+        var cellIdentifier: String {
+            switch self {
+            case .preview:
+                return UpcomingMoviePreviewCollectionViewCell.dequeuIdentifier
+            case .detail:
+                return UpcomingMoviePreviewCollectionViewCell.dequeuIdentifier
+            }
+        }
+    }
 }
 
 // MARK: - Constants
