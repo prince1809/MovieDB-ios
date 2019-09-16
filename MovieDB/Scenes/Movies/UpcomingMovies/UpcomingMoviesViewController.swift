@@ -13,12 +13,20 @@ class UpcomingMoviesViewController: UIViewController {
     @IBOutlet weak var toggleGridBarButtonItem: UIBarButtonItem!
     @IBOutlet weak var collectionView: UICollectionView!
     
+    private var viewModel = UpcomingMoviesViewModel()
+    
+    //private var dataSource:
+    
+    private var previewLayout: VerticalFlowLayout!
+    private var detailLayout: VerticalFlowLayout!
+    
     private var navigationManager: UpcomingMoviesNavigationManager!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        setupBindables()
     }
     
     
@@ -27,6 +35,7 @@ class UpcomingMoviesViewController: UIViewController {
     private func setupUI() {
         title = Constants.Title
         setupNavigationBar()
+        setupCollectionView()
     }
     
     private func setupNavigationBar() {
@@ -38,6 +47,48 @@ class UpcomingMoviesViewController: UIViewController {
         collectionView.delegate = self
         collectionView.registerNib(cellType: UpcomingMoviePreviewCollectionViewCell.self)
         //collectionView.registerNib(cellType: UpcomingMoviePreviewCollectionViewCell)
+        setupCollectionViewLayout()
+    }
+    
+    private func setupCollectionViewLayout() {
+        let detailLayoutWidth = Double(collectionView.frame.width - Constants.detailCellOffset)
+        detailLayout = VerticalFlowLayout(width: detailLayoutWidth, height: Constants.detailCellHeight)
+        
+        let previewLayoutWidth = Constants.previewCellHeight / Movie.posterAspectRatio
+        previewLayout = VerticalFlowLayout(width: previewLayoutWidth, height: Constants.previewCellHeight)
+        
+        collectionView.collectionViewLayout = previewLayout
+    }
+    
+    private func reloadCollectionView() {
+        
+    }
+    
+    private func configureView(withState state: SimpleViewState<Movie>) {
+        switch state {
+        case .populated, .paging, .initial:
+            //hide
+            collectionView.backgroundView = UIView(frame: .zero)
+        case .empty:
+             collectionView.backgroundView = UIView(frame: .zero)
+        default:
+             collectionView.backgroundView = UIView(frame: .zero)
+        }
+    }
+    
+    // MARK: - Reactive Behaviour
+    
+    private func setupBindables() {
+        viewModel.viewState.bindAndFire({ [weak self] state in
+            guard let strongSelf = self else { return }
+            DispatchQueue.main.async {
+                strongSelf.configureView(withState: state)
+                strongSelf.reloadCollectionView()
+            }
+        })
+        viewModel.startLoading.bind({ [weak self] start in
+            //start ? self?.showLoader
+        })
     }
     
 }

@@ -33,6 +33,10 @@
 		A30BFC43232F827E005B02FE /* UpcomingMovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30BFC42232F827E005B02FE /* UpcomingMovieCollectionViewCell.swift */; };
 		A30BFC45232F84AB005B02FE /* UICollectionView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30BFC44232F84AB005B02FE /* UICollectionView+Extensions.swift */; };
 		A30BFC47232F8575005B02FE /* Dequeuable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30BFC46232F8575005B02FE /* Dequeuable.swift */; };
+		A30BFC4A232FAB09005B02FE /* VerticalFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30BFC49232FAB09005B02FE /* VerticalFlowLayout.swift */; };
+		A30BFC4C232FD3CB005B02FE /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30BFC4B232FD3CB005B02FE /* Bindable.swift */; };
+		A30BFC4E232FD4D0005B02FE /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30BFC4D232FD4D0005B02FE /* ViewState.swift */; };
+		A30BFC50232FD769005B02FE /* Descriptable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30BFC4F232FD769005B02FE /* Descriptable.swift */; };
 		A32D831E232E45BC005AB288 /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A32D831D232E45BC005AB288 /* Account.storyboard */; };
 		A32D8321232E464A005AB288 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32D8320232E464A005AB288 /* AccountViewController.swift */; };
 		A32D8324232E4BD9005AB288 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32D8323232E4BD9005AB288 /* SignInViewController.swift */; };
@@ -88,6 +92,10 @@
 		A30BFC42232F827E005B02FE /* UpcomingMovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingMovieCollectionViewCell.swift; sourceTree = "<group>"; };
 		A30BFC44232F84AB005B02FE /* UICollectionView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extensions.swift"; sourceTree = "<group>"; };
 		A30BFC46232F8575005B02FE /* Dequeuable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dequeuable.swift; sourceTree = "<group>"; };
+		A30BFC49232FAB09005B02FE /* VerticalFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalFlowLayout.swift; sourceTree = "<group>"; };
+		A30BFC4B232FD3CB005B02FE /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
+		A30BFC4D232FD4D0005B02FE /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
+		A30BFC4F232FD769005B02FE /* Descriptable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Descriptable.swift; sourceTree = "<group>"; };
 		A32D831D232E45BC005AB288 /* Account.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Account.storyboard; sourceTree = "<group>"; };
 		A32D8320232E464A005AB288 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		A32D8323232E4BD9005AB288 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
@@ -193,6 +201,8 @@
 			children = (
 				A30BFC2A232F5E7E005B02FE /* Paginable.swift */,
 				A30BFC46232F8575005B02FE /* Dequeuable.swift */,
+				A30BFC4B232FD3CB005B02FE /* Bindable.swift */,
+				A30BFC4F232FD769005B02FE /* Descriptable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -232,6 +242,14 @@
 			path = Preview;
 			sourceTree = "<group>";
 		};
+		A30BFC48232FAAEF005B02FE /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				A30BFC49232FAB09005B02FE /* VerticalFlowLayout.swift */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
 		A32D831F232E4633005AB288 /* Account */ = {
 			isa = PBXGroup;
 			children = (
@@ -253,6 +271,7 @@
 		A32D8325232E4EF6005AB288 /* ViewComponents */ = {
 			isa = PBXGroup;
 			children = (
+				A30BFC48232FAAEF005B02FE /* Layout */,
 				A30BFC38232F818E005B02FE /* Cells */,
 				A32D832A232E5157005AB288 /* CustomViews */,
 				A32D8326232E4F00005AB288 /* Buttons */,
@@ -446,6 +465,7 @@
 			children = (
 				A3F8C81F232BF183002CFEA4 /* AppShortcutItem.swift */,
 				A30BFC2E232F6B28005B02FE /* URLConfiguration.swift */,
+				A30BFC4D232FD4D0005B02FE /* ViewState.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -549,10 +569,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MovieDB/Pods-MovieDB-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/KeychainSwift/KeychainSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -610,17 +632,21 @@
 				A32D8335232E9117005AB288 /* APIClient.swift in Sources */,
 				A30BFC47232F8575005B02FE /* Dequeuable.swift in Sources */,
 				A30BFC0D232F0668005B02FE /* PersistenceManager.swift in Sources */,
+				A30BFC4C232FD3CB005B02FE /* Bindable.swift in Sources */,
 				A3E74CDF232C7A39002D75A3 /* UIViewController+Extensions.swift in Sources */,
 				A30BFC2D232F62B4005B02FE /* Movie.swift in Sources */,
 				A3926337232D18AE0052238C /* SearchMoviesViewController.swift in Sources */,
 				A3C86249232AA364000CF79B /* AppDelegate.swift in Sources */,
 				A32D8324232E4BD9005AB288 /* SignInViewController.swift in Sources */,
+				A30BFC4E232FD4D0005B02FE /* ViewState.swift in Sources */,
 				A30BFC33232F6F76005B02FE /* File.swift in Sources */,
 				A32D8337232E912B005AB288 /* APIError.swift in Sources */,
 				A30BFC11232F0725005B02FE /* PersistenceStore.swift in Sources */,
 				A32D832E232E902E005AB288 /* AccountViewModel.swift in Sources */,
+				A30BFC50232FD769005B02FE /* Descriptable.swift in Sources */,
 				A30BFC1C232F1F5B005B02FE /* UpcomingMoviesViewModel.swift in Sources */,
 				A30BFC1E232F1F91005B02FE /* MoviesViewModel.swift in Sources */,
+				A30BFC4A232FAB09005B02FE /* VerticalFlowLayout.swift in Sources */,
 				A32D8339232E913C005AB288 /* Endpoint.swift in Sources */,
 				A30BFC2F232F6B28005B02FE /* URLConfiguration.swift in Sources */,
 				A32D8321232E464A005AB288 /* AccountViewController.swift in Sources */,
