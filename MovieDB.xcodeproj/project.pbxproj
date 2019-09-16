@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		586740F1259359D8307A697D /* Pods_MovieDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCA54E77E5A184C7CE2D9BFD /* Pods_MovieDB.framework */; };
+		A30BFC0D232F0668005B02FE /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30BFC0C232F0668005B02FE /* PersistenceManager.swift */; };
+		A30BFC11232F0725005B02FE /* PersistenceStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30BFC10232F0725005B02FE /* PersistenceStore.swift */; };
+		A30BFC13232F0A27005B02FE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30BFC12232F0A27005B02FE /* User.swift */; };
+		A30BFC16232F0B4C005B02FE /* Managed.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30BFC15232F0B4C005B02FE /* Managed.swift */; };
+		A30BFC18232F171B005B02FE /* NSManagedObjectContext+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30BFC17232F171B005B02FE /* NSManagedObjectContext+Extensions.swift */; };
+		A30BFC1A232F1846005B02FE /* CodingUserInfoKey+Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30BFC19232F1846005B02FE /* CodingUserInfoKey+Context.swift */; };
+		A30BFC1C232F1F5B005B02FE /* UpcomingMoviesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30BFC1B232F1F5A005B02FE /* UpcomingMoviesViewModel.swift */; };
+		A30BFC1E232F1F91005B02FE /* MoviesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30BFC1D232F1F91005B02FE /* MoviesViewModel.swift */; };
 		A32D831E232E45BC005AB288 /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A32D831D232E45BC005AB288 /* Account.storyboard */; };
 		A32D8321232E464A005AB288 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32D8320232E464A005AB288 /* AccountViewController.swift */; };
 		A32D8324232E4BD9005AB288 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32D8323232E4BD9005AB288 /* SignInViewController.swift */; };
@@ -38,6 +46,14 @@
 
 /* Begin PBXFileReference section */
 		3E87BD2C350D90B50DE8D7F4 /* Pods-MovieDB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieDB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MovieDB/Pods-MovieDB.debug.xcconfig"; sourceTree = "<group>"; };
+		A30BFC0C232F0668005B02FE /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
+		A30BFC10232F0725005B02FE /* PersistenceStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceStore.swift; sourceTree = "<group>"; };
+		A30BFC12232F0A27005B02FE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		A30BFC15232F0B4C005B02FE /* Managed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Managed.swift; sourceTree = "<group>"; };
+		A30BFC17232F171B005B02FE /* NSManagedObjectContext+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+Extensions.swift"; sourceTree = "<group>"; };
+		A30BFC19232F1846005B02FE /* CodingUserInfoKey+Context.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CodingUserInfoKey+Context.swift"; sourceTree = "<group>"; };
+		A30BFC1B232F1F5A005B02FE /* UpcomingMoviesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingMoviesViewModel.swift; sourceTree = "<group>"; };
+		A30BFC1D232F1F91005B02FE /* MoviesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewModel.swift; sourceTree = "<group>"; };
 		A32D831D232E45BC005AB288 /* Account.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Account.storyboard; sourceTree = "<group>"; };
 		A32D8320232E464A005AB288 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		A32D8323232E4BD9005AB288 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
@@ -89,6 +105,32 @@
 				C526646594D7530E03AFE708 /* Pods-MovieDB.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		A30BFC0E232F0702005B02FE /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				A30BFC0F232F0711005B02FE /* Stores */,
+				A30BFC12232F0A27005B02FE /* User.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		A30BFC0F232F0711005B02FE /* Stores */ = {
+			isa = PBXGroup;
+			children = (
+				A30BFC10232F0725005B02FE /* PersistenceStore.swift */,
+			);
+			path = Stores;
+			sourceTree = "<group>";
+		};
+		A30BFC14232F0B33005B02FE /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				A30BFC15232F0B4C005B02FE /* Managed.swift */,
+				A30BFC17232F171B005B02FE /* NSManagedObjectContext+Extensions.swift */,
+			);
+			path = "Core Data";
 			sourceTree = "<group>";
 		};
 		A32D831F232E4633005AB288 /* Account */ = {
@@ -174,6 +216,7 @@
 			isa = PBXGroup;
 			children = (
 				A32D833D232E9450005AB288 /* AuthenticationManager.swift */,
+				A30BFC0C232F0668005B02FE /* PersistenceManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -181,6 +224,7 @@
 		A392632F232D14230052238C /* Movies */ = {
 			isa = PBXGroup;
 			children = (
+				A30BFC1D232F1F91005B02FE /* MoviesViewModel.swift */,
 				A3926335232D18630052238C /* SearchMovies */,
 				A3926330232D14300052238C /* UpcomingMovies */,
 			);
@@ -191,6 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				A3926331232D14600052238C /* UpcomingMoviesViewController.swift */,
+				A30BFC1B232F1F5A005B02FE /* UpcomingMoviesViewModel.swift */,
 			);
 			path = UpcomingMovies;
 			sourceTree = "<group>";
@@ -227,6 +272,7 @@
 				A32D833C232E943C005AB288 /* Managers */,
 				A32D8325232E4EF6005AB288 /* ViewComponents */,
 				A32D832F232E908F005AB288 /* Networking */,
+				A30BFC0E232F0702005B02FE /* Entities */,
 				A3F8C819232BE9C2002CFEA4 /* Scenes */,
 				A3C8625A232AA934000CF79B /* Storyboards */,
 				A3F8C81D232BF167002CFEA4 /* Helpers */,
@@ -254,6 +300,7 @@
 			isa = PBXGroup;
 			children = (
 				A3E74CDE232C7A39002D75A3 /* UIViewController+Extensions.swift */,
+				A30BFC19232F1846005B02FE /* CodingUserInfoKey+Context.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -281,6 +328,7 @@
 		A3F8C81D232BF167002CFEA4 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				A30BFC14232F0B33005B02FE /* Core Data */,
 				A3E74CDD232C79C1002D75A3 /* Extensions */,
 				A3F8C81E232BF171002CFEA4 /* Utils */,
 			);
@@ -433,19 +481,27 @@
 				A32D832C232E516E005AB288 /* GradientView.swift in Sources */,
 				A32D833E232E9450005AB288 /* AuthenticationManager.swift in Sources */,
 				A3926332232D14600052238C /* UpcomingMoviesViewController.swift in Sources */,
+				A30BFC16232F0B4C005B02FE /* Managed.swift in Sources */,
 				A3C8624B232AA364000CF79B /* SplashViewController.swift in Sources */,
 				A3F8C823232BF5A5002CFEA4 /* MainTabBarControlller.swift in Sources */,
 				A32D833B232E9148005AB288 /* Keys.swift in Sources */,
 				A32D8329232E4F2C005AB288 /* ShrinkingButton.swift in Sources */,
+				A30BFC13232F0A27005B02FE /* User.swift in Sources */,
 				A32D8335232E9117005AB288 /* APIClient.swift in Sources */,
+				A30BFC0D232F0668005B02FE /* PersistenceManager.swift in Sources */,
 				A3E74CDF232C7A39002D75A3 /* UIViewController+Extensions.swift in Sources */,
 				A3926337232D18AE0052238C /* SearchMoviesViewController.swift in Sources */,
 				A3C86249232AA364000CF79B /* AppDelegate.swift in Sources */,
 				A32D8324232E4BD9005AB288 /* SignInViewController.swift in Sources */,
 				A32D8337232E912B005AB288 /* APIError.swift in Sources */,
+				A30BFC11232F0725005B02FE /* PersistenceStore.swift in Sources */,
 				A32D832E232E902E005AB288 /* AccountViewModel.swift in Sources */,
+				A30BFC1C232F1F5B005B02FE /* UpcomingMoviesViewModel.swift in Sources */,
+				A30BFC1E232F1F91005B02FE /* MoviesViewModel.swift in Sources */,
 				A32D8339232E913C005AB288 /* Endpoint.swift in Sources */,
 				A32D8321232E464A005AB288 /* AccountViewController.swift in Sources */,
+				A30BFC18232F171B005B02FE /* NSManagedObjectContext+Extensions.swift in Sources */,
+				A30BFC1A232F1846005B02FE /* CodingUserInfoKey+Context.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

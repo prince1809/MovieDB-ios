@@ -11,4 +11,20 @@ import KeychainSwift
 
 class AuthenticationManager {
     
+    static let shared = AuthenticationManager()
+    
+    private var userStore: PersistenceStore<User>!
+    
+    // MARK: - Initializers
+    
+    init() {
+        setupStores()
+    }
+    
+    // MARK: - Private
+    
+    private func setupStores() {
+        let context = PersistenceManager.shared.mainContext
+        userStore = PersistenceStore(context)
+    }
 }

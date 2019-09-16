@@ -11,6 +11,11 @@ import CoreData
 
 final class AccountViewModel {
     
+//    private var managedObjectContext: NSManagedObjectContext
+//    private var authManager: AuthenticationManager()
+//    
+//    private let authClient = AuthClient()
+    
     
     //private let authClient = AuthClient()
 }

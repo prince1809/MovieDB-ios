@@ -18,21 +18,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upcoming movies" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ik0-Ef-q6p">
-                                <rect key="frame" x="53" y="424" width="308" height="48"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="R5x-LF-kpN">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="GaC-oQ-PWc">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="ik0-Ef-q6p" firstAttribute="centerX" secondItem="CQj-qp-Ago" secondAttribute="centerX" id="9RL-dp-uPx"/>
-                            <constraint firstItem="ik0-Ef-q6p" firstAttribute="centerY" secondItem="CQj-qp-Ago" secondAttribute="centerY" id="iwl-Fz-4KP"/>
+                            <constraint firstItem="R5x-LF-kpN" firstAttribute="leading" secondItem="2v5-Da-DQR" secondAttribute="leading" id="8Ed-Fo-C10"/>
+                            <constraint firstItem="2v5-Da-DQR" firstAttribute="trailing" secondItem="R5x-LF-kpN" secondAttribute="trailing" id="AEv-n9-08v"/>
+                            <constraint firstItem="2v5-Da-DQR" firstAttribute="bottom" secondItem="R5x-LF-kpN" secondAttribute="bottom" id="H1C-09-YDL"/>
+                            <constraint firstItem="R5x-LF-kpN" firstAttribute="top" secondItem="2v5-Da-DQR" secondAttribute="top" id="Qjd-6i-Mld"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2v5-Da-DQR"/>
                     </view>
-                    <navigationItem key="navigationItem" id="wFf-mh-jNs"/>
+                    <navigationItem key="navigationItem" id="wFf-mh-jNs">
+                        <barButtonItem key="leftBarButtonItem" image="List" id="1g3-cJ-1eW" userLabel="Toggle Grid Bar Button Item"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="R5x-LF-kpN" id="DvA-jD-xDE"/>
+                        <outlet property="toggleGridBarButtonItem" destination="1g3-cJ-1eW" id="38d-H1-SFi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ibQ-N2-U2u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -60,6 +73,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="List" width="24" height="24"/>
         <image name="Movies" width="25" height="25"/>
     </resources>
 </document>
