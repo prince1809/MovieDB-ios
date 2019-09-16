@@ -40,6 +40,16 @@ class PersistenceManager {
         
     }
     
+    // MARK: - Movie Genres
+    
+    var genres: [Genre] {
+        return []
+    }
+    
+    func findGenre(with id: Int) -> Genre? {
+        return genres.filter { $0.id == id }.first
+    }
+    
     // MARK: - Test mockups
     
     lazy var mockPersistentContainer: NSPersistentContainer = {
