@@ -79,6 +79,10 @@
 		A3D3D8EF2332368600BD26B8 /* SimpleCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D3D8EE2332368600BD26B8 /* SimpleCollectionViewDataSource.swift */; };
 		A3D3D8F123324EC400BD26B8 /* UIRefreshControl+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D3D8F023324EC400BD26B8 /* UIRefreshControl+Extensions.swift */; };
 		A3D3D8F32332505B00BD26B8 /* Loadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D3D8F22332505B00BD26B8 /* Loadable.swift */; };
+		A3D3D8F52332758900BD26B8 /* LocalizationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D3D8F42332758900BD26B8 /* LocalizationHelper.swift */; };
+		A3D3D8F7233278DB00BD26B8 /* URLRequest+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D3D8F6233278DB00BD26B8 /* URLRequest+Extensions.swift */; };
+		A3D3D8F923327AD200BD26B8 /* Dictionary+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D3D8F823327AD200BD26B8 /* Dictionary+Extensions.swift */; };
+		A3D3D8FB23327F3400BD26B8 /* TheMovieDb.plist in Resources */ = {isa = PBXBuildFile; fileRef = A3D3D8FA23327F3400BD26B8 /* TheMovieDb.plist */; };
 		A3E74CDF232C7A39002D75A3 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E74CDE232C7A39002D75A3 /* UIViewController+Extensions.swift */; };
 		A3F8C81C232BEEE0002CFEA4 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F8C81B232BEEE0002CFEA4 /* SplashViewModel.swift */; };
 		A3F8C820232BF183002CFEA4 /* AppShortcutItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F8C81F232BF183002CFEA4 /* AppShortcutItem.swift */; };
@@ -160,6 +164,10 @@
 		A3D3D8EE2332368600BD26B8 /* SimpleCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleCollectionViewDataSource.swift; sourceTree = "<group>"; };
 		A3D3D8F023324EC400BD26B8 /* UIRefreshControl+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIRefreshControl+Extensions.swift"; sourceTree = "<group>"; };
 		A3D3D8F22332505B00BD26B8 /* Loadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loadable.swift; sourceTree = "<group>"; };
+		A3D3D8F42332758900BD26B8 /* LocalizationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationHelper.swift; sourceTree = "<group>"; };
+		A3D3D8F6233278DB00BD26B8 /* URLRequest+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+Extensions.swift"; sourceTree = "<group>"; };
+		A3D3D8F823327AD200BD26B8 /* Dictionary+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extensions.swift"; sourceTree = "<group>"; };
+		A3D3D8FA23327F3400BD26B8 /* TheMovieDb.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = TheMovieDb.plist; sourceTree = "<group>"; };
 		A3E74CDE232C7A39002D75A3 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		A3F8C81B232BEEE0002CFEA4 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
 		A3F8C81F232BF183002CFEA4 /* AppShortcutItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppShortcutItem.swift; sourceTree = "<group>"; };
@@ -462,6 +470,7 @@
 				A3C86254232AA366000CF79B /* Info.plist */,
 				A30BFC36232F80D8005B02FE /* Localizable.strings */,
 				A3D3D8CA2331BE9A00BD26B8 /* UpcomingMovies.xcdatamodeld */,
+				A3D3D8FA23327F3400BD26B8 /* TheMovieDb.plist */,
 			);
 			path = MovieDB;
 			sourceTree = "<group>";
@@ -548,6 +557,8 @@
 				A30BFC19232F1846005B02FE /* CodingUserInfoKey+Context.swift */,
 				A30BFC44232F84AB005B02FE /* UICollectionView+Extensions.swift */,
 				A3D3D8F023324EC400BD26B8 /* UIRefreshControl+Extensions.swift */,
+				A3D3D8F6233278DB00BD26B8 /* URLRequest+Extensions.swift */,
+				A3D3D8F823327AD200BD26B8 /* Dictionary+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -590,6 +601,7 @@
 				A30BFC2E232F6B28005B02FE /* URLConfiguration.swift */,
 				A30BFC4D232FD4D0005B02FE /* ViewState.swift */,
 				A3D3D8E32331E7D200BD26B8 /* ColorPalette.swift */,
+				A3D3D8F42332758900BD26B8 /* LocalizationHelper.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -670,6 +682,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3D3D8FB23327F3400BD26B8 /* TheMovieDb.plist in Resources */,
 				A3C86253232AA366000CF79B /* LaunchScreen.storyboard in Resources */,
 				A392632C232D10880052238C /* UpcomingMovies.storyboard in Resources */,
 				A30BFC3F232F8205005B02FE /* UpcomingMoviePreviewCollectionViewCell.xib in Resources */,
@@ -746,6 +759,7 @@
 				A30BFC3E232F8205005B02FE /* UpcomingMoviePreviewCollectionViewCell.swift in Sources */,
 				A3D3D8E22331E48100BD26B8 /* DefaultRefreshControl.swift in Sources */,
 				A3D3D8DA2331C54B00BD26B8 /* NibLoadable.swift in Sources */,
+				A3D3D8F7233278DB00BD26B8 /* URLRequest+Extensions.swift in Sources */,
 				A32D833E232E9450005AB288 /* AuthenticationManager.swift in Sources */,
 				A3D3D8EB233230DA00BD26B8 /* CollectionViewCellAnimator.swift in Sources */,
 				A3926332232D14600052238C /* UpcomingMoviesViewController.swift in Sources */,
@@ -793,9 +807,11 @@
 				A3D3D8D12331C2A800BD26B8 /* Retryable.swift in Sources */,
 				A32D8321232E464A005AB288 /* AccountViewController.swift in Sources */,
 				A3D3D8DE2331D7C500BD26B8 /* EmptyPlaceholderView.swift in Sources */,
+				A3D3D8F52332758900BD26B8 /* LocalizationHelper.swift in Sources */,
 				A30BFC18232F171B005B02FE /* NSManagedObjectContext+Extensions.swift in Sources */,
 				A3D3D8CF2331C27700BD26B8 /* PlaceholderDisplayable.swift in Sources */,
 				A30BFC1A232F1846005B02FE /* CodingUserInfoKey+Context.swift in Sources */,
+				A3D3D8F923327AD200BD26B8 /* Dictionary+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

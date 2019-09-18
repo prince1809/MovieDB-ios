@@ -27,6 +27,7 @@ enum MovieProvider {
 // MARK: - Endpoint
 
 extension MovieProvider: Endpoint {
+    
     var base: String {
         return "https://api.themoviedb.org"
     }
@@ -87,7 +88,7 @@ extension MovieProvider: Endpoint {
         }
     }
     
-    var paramterEncoding: ParameterEncoding {
+    var parameterEncoding: ParameterEncoding {
         return .defaultEncoding
     }
     
