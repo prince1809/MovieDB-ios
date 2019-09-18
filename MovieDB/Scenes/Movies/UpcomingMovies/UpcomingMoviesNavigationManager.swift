@@ -20,8 +20,15 @@ class UpcomingMoviesNavigationManager: NSObject, UINavigationControllerDelegate 
         self.verticalSafeAreaOffset = verticalSafeAreaOffset
     }
     
+    
+    // MARK: - Public
+    
     func configure(selectedFrame: CGRect?, with imageToTransition: UIImage?) {
         self.selectedFrame = selectedFrame
         self.imageToTransition = imageToTransition
+    }
+    
+    func updateOffset(_ verticalSafeAreaOffset: CGFloat) {
+        self.verticalSafeAreaOffset = verticalSafeAreaOffset
     }
 }

@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum APIError: Error {
+enum APIError: Error, ErrorDescriptable {
     case notAuthenticated
     case notFound
     case networkProblem
@@ -33,6 +33,26 @@ enum APIError: Error {
             self = .unknown(response)
         }
     }
+    
+    var isAuthError: Bool {
+        switch self {
+        case .notAuthenticated: return true
+        default: return false
+        }
+    }
+    
+    var description: String {
+        switch self {
+        case .notAuthenticated:
+            return ErrorMessages.Default.NotAuthorized
+        case .notFound:
+            return ErrorMessages.Default.NotFound
+        case .networkProblem, .unknown:
+            return ErrorMessages.Default.ServerError
+        case .requestFailed, .badRequest, .invalidData:
+            return ErrorMessages.Default.RequestFailed
+        }
+    }
 }
 
 
@@ -40,7 +60,7 @@ enum APIError: Error {
 
 extension APIError {
     
-    struct ErrorMessage {
+    struct ErrorMessages {
         
         struct Default {
             static let ServerError = "Server Error. Please, try again later."

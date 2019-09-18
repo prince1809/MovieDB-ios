@@ -26,6 +26,15 @@ class MovieClient: APIClient {
     // MARK: - Movie list
     
     func getMovies(page: Int, filter: MovieListFilter, completion: @escaping (Result<MovieResult?, APIError>) -> Void) {
-        
+        //let request = getMovieListRequest
     }
+    
+//    private func getMovieListRequest(with filter: MovieListFilter, page: Int) -> URLRequest {
+////        switch filter {
+////        case .upcoming:
+////            return MovieProvider.getUpcoming(page: <#T##Int#>)
+////        default:
+////            <#code#>
+////        }
+//    }
 }

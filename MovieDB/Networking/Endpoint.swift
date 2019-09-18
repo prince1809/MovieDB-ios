@@ -21,8 +21,19 @@ protocol Endpoint {
 
 extension Endpoint {
     
-//    var apiKey: String {
-//        //return
+    var apiKey: String {
+        return AuthenticationManager.shared.apiKey
+    }
+    
+    var urlComponents: URLComponents {
+        var components = URLComponents(string: base)!
+        components.path = path
+        return components
+    }
+    
+//    var request: URLRequest {
+//        let url = URLComponents(string: base)!
+//        //components.
 //    }
 }
 

@@ -15,6 +15,11 @@ class AuthenticationManager {
     
     private var userStore: PersistenceStore<User>!
     
+    lazy var apiKey: String = {
+        let keys = retrieveKeys()
+        return keys.readAccessToken
+    }()
+    
     // MARK: - Initializers
     
     init() {
@@ -26,5 +31,23 @@ class AuthenticationManager {
     private func setupStores() {
         let context = PersistenceManager.shared.mainContext
         userStore = PersistenceStore(context)
+    }
+    
+    // MARK: - TheMovieDB keys
+    private func retrieveKeys() -> Keys {
+        guard let url = Bundle.main.url(forResource: "TheMovieDb", withExtension: ".plist") else {
+            fatalError()
+        }
+        do {
+            let data = try Data(contentsOf: url)
+            let decoder = PropertyListDecoder()
+            let plist = try decoder.decode([String: Keys].self, from: data)
+            guard let keys = plist["Keys"] else {
+                fatalError()
+            }
+            return keys
+        } catch {
+            fatalError()
+        }
     }
 }

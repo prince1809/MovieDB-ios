@@ -54,4 +54,50 @@ extension MoviesViewModel {
         return viewState.value.currentEntities
     }
     
+    var needsPrefetch: Bool {
+        return viewState.value.needsPrefetch
+    }
+    
+//    func buildDetailViewModel(atIndex index: Int) -> MovieDetailViewModel? {
+//        
+//    }
+    
+    func getMovies() {
+        let showLoader = viewState.value.isInitialPage
+        fetchMovies(currentPage: viewState.value.currentPage, filter: filter, showLoader: showLoader)
+    }
+    
+    func refreshMovies() {
+        fetchMovies(currentPage: 1, filter: filter, showLoader: false)
+    }
+    
+    private func fetchMovies(currentPage: Int, filter: MovieListFilter, showLoader: Bool = false) {
+        startLoading.value = showLoader
+        movieClient.getMovies(page: currentPage, filter: filter, completion: { result in
+            self.startLoading.value = false
+            switch result {
+            case .success(let movieResult):
+                guard let movieResult = movieResult else { return }
+                self.processMovieResult(movieResult)
+            case .failure(let error):
+                self.viewState.value = .error(error)
+            }
+        })
+    }
+    
+    func processMovieResult(_ movieResult: MovieResult) {
+        let fetchedMovies = movieResult.results
+        var allMovies = movieResult.currentPage == 1 ? [] : viewState.value.currentEntities
+        allMovies.append(contentsOf: fetchedMovies)
+        guard !allMovies.isEmpty else {
+            viewState.value = .empty
+            return
+        }
+        if movieResult.hasMorePages {
+            viewState.value = .paging(allMovies, next: movieResult.nextPage)
+        } else {
+            viewState.value = .populated(allMovies)
+        }
+    }
+    
 }
