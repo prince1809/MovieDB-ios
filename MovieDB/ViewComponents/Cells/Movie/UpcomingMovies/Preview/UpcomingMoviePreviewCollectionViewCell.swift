@@ -9,7 +9,7 @@
 import UIKit
 import Kingfisher
 
-class UpcomingMoviePreviewCollectionViewCell: UICollectionViewCell {
+class UpcomingMoviePreviewCollectionViewCell: UICollectionViewCell, UpcomingMovieCollectionViewCell {
 
     @IBOutlet weak var posterImageView: UIImageView!
     
@@ -28,6 +28,11 @@ class UpcomingMoviePreviewCollectionViewCell: UICollectionViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         posterImageView.image = nil
+    }
+    
+    // MARK: - Private
+    private func setupUI() {
+        
     }
     
     // MARK: - Reactive Behaviour

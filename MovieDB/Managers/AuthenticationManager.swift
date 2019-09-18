@@ -17,7 +17,7 @@ class AuthenticationManager {
     
     lazy var apiKey: String = {
         let keys = retrieveKeys()
-        return keys.readAccessToken
+        return keys.apiKey
     }()
     
     // MARK: - Initializers

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Bagel
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private var currentTabBarSelectedIndex: MainTabBarController.Items = .upcomingMovies
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        Bagel.start()
         storyboard = UIStoryboard(name: "Main", bundle: nil)
         return true
     }
