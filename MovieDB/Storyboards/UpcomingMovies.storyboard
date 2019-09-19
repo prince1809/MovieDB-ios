@@ -40,7 +40,11 @@
                         <viewLayoutGuide key="safeArea" id="2v5-Da-DQR"/>
                     </view>
                     <navigationItem key="navigationItem" id="wFf-mh-jNs">
-                        <barButtonItem key="leftBarButtonItem" image="List" id="1g3-cJ-1eW" userLabel="Toggle Grid Bar Button Item"/>
+                        <barButtonItem key="leftBarButtonItem" image="List" id="1g3-cJ-1eW" userLabel="Toggle Grid Bar Button Item">
+                            <connections>
+                                <action selector="toggleGridAction:" destination="k5F-Jw-x72" id="Fwu-pm-Zqn"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="R5x-LF-kpN" id="DvA-jD-xDE"/>

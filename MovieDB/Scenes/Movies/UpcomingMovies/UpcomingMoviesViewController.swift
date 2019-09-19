@@ -155,6 +155,20 @@ class UpcomingMoviesViewController: UIViewController, PlaceholderDisplayable, Lo
             start == true ? self?.showLoader() : self?.hideLoader()
         })
     }
+    
+    @IBAction func toggleGridAction(_ sender: Any) {
+        guard !isAnimatingPresentation else { return }
+        switch presentationMode {
+        case .preview:
+            presentationMode = .detail
+            updateCollectionViewLayout(detailLayout)
+        case .detail:
+            presentationMode = .preview
+            updateCollectionViewLayout(previewLayout)
+        }
+    }
+    
+    
 }
 
 // MARK: - TabBarScrollable
