@@ -19,9 +19,21 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var signInButton: ShrinkingButton!
     
     weak var delegate: SignInViewControllerDelegate?
+    
+    // MARK: - Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    // MARK: - Private
+    
+    private func setupUI() {
+        setupButtons()
+    }
+    
+    private func setupButtons() {
+        signInButton.layer.cornerRadius = 25
     }
     
     // MARK: - Public

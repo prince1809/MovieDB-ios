@@ -39,6 +39,8 @@
 		A30BFC50232FD769005B02FE /* Descriptable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30BFC4F232FD769005B02FE /* Descriptable.swift */; };
 		A30BFC54232FDEFE005B02FE /* UpcomingMovieDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30BFC52232FDEFE005B02FE /* UpcomingMovieDetailCollectionViewCell.swift */; };
 		A30BFC55232FDEFE005B02FE /* UpcomingMovieDetailCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A30BFC53232FDEFE005B02FE /* UpcomingMovieDetailCollectionViewCell.xib */; };
+		A32BE7402338E5680095B51D /* SpinerLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32BE73F2338E5680095B51D /* SpinerLayer.swift */; };
+		A32BE7422338EBF10095B51D /* CGRect+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32BE7412338EBF10095B51D /* CGRect+Extensions.swift */; };
 		A32D831E232E45BC005AB288 /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A32D831D232E45BC005AB288 /* Account.storyboard */; };
 		A32D8321232E464A005AB288 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32D8320232E464A005AB288 /* AccountViewController.swift */; };
 		A32D8324232E4BD9005AB288 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32D8323232E4BD9005AB288 /* SignInViewController.swift */; };
@@ -122,6 +124,8 @@
 		A30BFC4F232FD769005B02FE /* Descriptable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Descriptable.swift; sourceTree = "<group>"; };
 		A30BFC52232FDEFE005B02FE /* UpcomingMovieDetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingMovieDetailCollectionViewCell.swift; sourceTree = "<group>"; };
 		A30BFC53232FDEFE005B02FE /* UpcomingMovieDetailCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpcomingMovieDetailCollectionViewCell.xib; sourceTree = "<group>"; };
+		A32BE73F2338E5680095B51D /* SpinerLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinerLayer.swift; sourceTree = "<group>"; };
+		A32BE7412338EBF10095B51D /* CGRect+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGRect+Extensions.swift"; sourceTree = "<group>"; };
 		A32D831D232E45BC005AB288 /* Account.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Account.storyboard; sourceTree = "<group>"; };
 		A32D8320232E464A005AB288 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		A32D8323232E4BD9005AB288 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
@@ -356,6 +360,7 @@
 			isa = PBXGroup;
 			children = (
 				A32D8328232E4F2C005AB288 /* ShrinkingButton.swift */,
+				A32BE73F2338E5680095B51D /* SpinerLayer.swift */,
 			);
 			path = "Shrinking Button";
 			sourceTree = "<group>";
@@ -559,6 +564,7 @@
 				A3D3D8F023324EC400BD26B8 /* UIRefreshControl+Extensions.swift */,
 				A3D3D8F6233278DB00BD26B8 /* URLRequest+Extensions.swift */,
 				A3D3D8F823327AD200BD26B8 /* Dictionary+Extensions.swift */,
+				A32BE7412338EBF10095B51D /* CGRect+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -776,6 +782,7 @@
 				A30BFC23232F2E52005B02FE /* MovieProvider.swift in Sources */,
 				A30BFC43232F827E005B02FE /* UpcomingMovieCollectionViewCell.swift in Sources */,
 				A3D3D8E823322EC400BD26B8 /* CollectionViewPrefetching.swift in Sources */,
+				A32BE7402338E5680095B51D /* SpinerLayer.swift in Sources */,
 				A30BFC2B232F5E7E005B02FE /* Paginable.swift in Sources */,
 				A32D833B232E9148005AB288 /* Keys.swift in Sources */,
 				A32D8329232E4F2C005AB288 /* ShrinkingButton.swift in Sources */,
@@ -802,6 +809,7 @@
 				A30BFC50232FD769005B02FE /* Descriptable.swift in Sources */,
 				A30BFC1C232F1F5B005B02FE /* UpcomingMoviesViewModel.swift in Sources */,
 				A3D3D8EF2332368600BD26B8 /* SimpleCollectionViewDataSource.swift in Sources */,
+				A32BE7422338EBF10095B51D /* CGRect+Extensions.swift in Sources */,
 				A30BFC1E232F1F91005B02FE /* MoviesViewModel.swift in Sources */,
 				A30BFC4A232FAB09005B02FE /* VerticalFlowLayout.swift in Sources */,
 				A32D8339232E913C005AB288 /* Endpoint.swift in Sources */,

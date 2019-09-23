@@ -9,7 +9,19 @@
 import Foundation
 import UIKit
 
-@IBDesignable class ShrinkingButton: UIButton {
+@IBDesignable class ShrinkingButton: UIButton, UIViewControllerTransitioningDelegate, CAAnimationDelegate {
+    
+    var spinnerColor: UIColor = UIColor.white {
+        didSet {
+            //spiner.spinerColor = spiner
+        }
+    }
+    
+    private lazy var spiner: SpinerLayer = {
+        let spiner = SpinerLayer(frame: self.frame)
+        self.layer.addSublayer(spiner)
+        return spiner
+    }()
     
     private var cachedTitle: String?
     private var cachedImage: UIImage?
@@ -32,6 +44,7 @@ import UIKit
     
     func startAnimation() {
         self.isAnimating = true
+        
     }
     
 }

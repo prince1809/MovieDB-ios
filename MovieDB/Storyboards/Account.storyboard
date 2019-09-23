@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina5_9" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nf7-4Y-HkO" userLabel="Help Button">
-                                <rect key="frame" x="303" y="68" width="48" height="48"/>
+                                <rect key="frame" x="303" y="92" width="48" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="48" id="UVq-UD-2PX"/>
                                     <constraint firstAttribute="width" secondItem="Nf7-4Y-HkO" secondAttribute="height" multiplier="1:1" id="x5P-fm-1m5"/>
@@ -58,7 +56,7 @@
                             <constraint firstItem="IP5-g4-OcW" firstAttribute="trailing" secondItem="yAk-YW-a52" secondAttribute="trailing" constant="24" id="c96-GA-Edh"/>
                             <constraint firstItem="yAk-YW-a52" firstAttribute="centerY" secondItem="MqA-ip-5uc" secondAttribute="centerY" constant="-20" id="fr1-Bk-FUk"/>
                             <constraint firstItem="IP5-g4-OcW" firstAttribute="trailing" secondItem="Nf7-4Y-HkO" secondAttribute="trailing" constant="24" id="oa2-Kn-gZ9"/>
-                            <constraint firstItem="Nf7-4Y-HkO" firstAttribute="top" secondItem="IP5-g4-OcW" secondAttribute="top" constant="24" id="wTk-cG-NiU"/>
+                            <constraint firstItem="Nf7-4Y-HkO" firstAttribute="top" secondItem="IP5-g4-OcW" secondAttribute="top" constant="48" id="wTk-cG-NiU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="IP5-g4-OcW"/>
                         <userDefinedRuntimeAttributes>
