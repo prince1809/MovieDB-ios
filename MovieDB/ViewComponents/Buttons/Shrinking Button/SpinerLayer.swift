@@ -10,9 +10,9 @@ import UIKit
 
 class SpinerLayer: CAShapeLayer {
     
-    var spinerColor = UIColor.white {
+    var spinnerColor = UIColor.white {
         didSet {
-            strokeColor = spinerColor.cgColor
+            strokeColor = spinnerColor.cgColor
         }
     }
     
@@ -22,7 +22,7 @@ class SpinerLayer: CAShapeLayer {
         self.setToFrame(frame)
         
         self.fillColor = nil
-        self.strokeColor = spinerColor.cgColor
+        self.strokeColor = spinnerColor.cgColor
         self.lineWidth = 1
         
         self.strokeEnd = 0.4

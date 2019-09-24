@@ -17,6 +17,10 @@ class AccountViewController: UIViewController {
         return viewController
     }()
     
+    private var viewModel = AccountViewModel()
+    
+    // MARK: - Lifecycle
+    
     override func viewDidLoad() {
         print("view loaded")
         super.viewDidLoad()
@@ -45,9 +49,30 @@ extension AccountViewController: SignInViewControllerDelegate {
     
     func signInViewController(_ signInViewController: SignInViewController, didTapSignInButton tapped: Bool) {
         signInViewController.startLoading()
+        print("logging in....")
     }
+}
+
+extension AccountViewController {
     
+    enum SegueIdentifier: String {
+        case authPermission = "AuthPermissionSegue"
+        case collectionList = "CollectionListSegue"
+        case customLists = "CustomListsSegue"
+    }
     
 }
 
+
+// MARK: - Constants
+
+extension AccountViewController {
+    
+    struct Constants {
+        
+        static let Title = NSLocalizedString("accountTabBarTitle", comment: "")
+        static let NavigationItemTitle = NSLocalizedString("accountTitle", comment: "")
+        
+    }
+}
 

@@ -24,6 +24,7 @@ class SignInViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupUI()
     }
     
     // MARK: - Private
@@ -33,12 +34,17 @@ class SignInViewController: UIViewController {
     }
     
     private func setupButtons() {
-        signInButton.layer.cornerRadius = 25
+        signInButton.layer.cornerRadius = 5
     }
     
     // MARK: - Public
+    
     func startLoading() {
-        //signInButton.start
+        signInButton.startAnimation()
+    }
+    
+    func stopLoading() {
+        signInButton.stopAnimation(revertAfterDelay: 0.1, completion: nil)
     }
 
     // MARK: - Actions
