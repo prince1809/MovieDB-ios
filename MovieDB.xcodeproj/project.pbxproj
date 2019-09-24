@@ -96,6 +96,7 @@
 		A3F6DAB2233A160D001E2287 /* ListResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F6DAB1233A160D001E2287 /* ListResult.swift */; };
 		A3F6DAB4233A1A78001E2287 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F6DAB3233A1A78001E2287 /* List.swift */; };
 		A3F6DAB6233A2400001E2287 /* MarkAsFavoriteResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F6DAB5233A2400001E2287 /* MarkAsFavoriteResult.swift */; };
+		A3F6DAB8233A6FC5001E2287 /* PersistenceStore+User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F6DAB7233A6FC5001E2287 /* PersistenceStore+User.swift */; };
 		A3F8C81C232BEEE0002CFEA4 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F8C81B232BEEE0002CFEA4 /* SplashViewModel.swift */; };
 		A3F8C820232BF183002CFEA4 /* AppShortcutItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F8C81F232BF183002CFEA4 /* AppShortcutItem.swift */; };
 		A3F8C823232BF5A5002CFEA4 /* MainTabBarControlller.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F8C822232BF5A5002CFEA4 /* MainTabBarControlller.swift */; };
@@ -193,6 +194,7 @@
 		A3F6DAB1233A160D001E2287 /* ListResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListResult.swift; sourceTree = "<group>"; };
 		A3F6DAB3233A1A78001E2287 /* List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
 		A3F6DAB5233A2400001E2287 /* MarkAsFavoriteResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkAsFavoriteResult.swift; sourceTree = "<group>"; };
+		A3F6DAB7233A6FC5001E2287 /* PersistenceStore+User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PersistenceStore+User.swift"; sourceTree = "<group>"; };
 		A3F8C81B232BEEE0002CFEA4 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
 		A3F8C81F232BF183002CFEA4 /* AppShortcutItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppShortcutItem.swift; sourceTree = "<group>"; };
 		A3F8C822232BF5A5002CFEA4 /* MainTabBarControlller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarControlller.swift; sourceTree = "<group>"; };
@@ -238,6 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				A30BFC10232F0725005B02FE /* PersistenceStore.swift */,
+				A3F6DAB7233A6FC5001E2287 /* PersistenceStore+User.swift */,
 			);
 			path = Stores;
 			sourceTree = "<group>";
@@ -819,6 +822,7 @@
 				A3D3D8F7233278DB00BD26B8 /* URLRequest+Extensions.swift in Sources */,
 				A32D833E232E9450005AB288 /* AuthenticationManager.swift in Sources */,
 				A3D3D8EB233230DA00BD26B8 /* CollectionViewCellAnimator.swift in Sources */,
+				A3F6DAB8233A6FC5001E2287 /* PersistenceStore+User.swift in Sources */,
 				A3926332232D14600052238C /* UpcomingMoviesViewController.swift in Sources */,
 				A30BFC16232F0B4C005B02FE /* Managed.swift in Sources */,
 				A3C8624B232AA364000CF79B /* SplashViewController.swift in Sources */,

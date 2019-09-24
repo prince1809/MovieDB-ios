@@ -23,4 +23,10 @@ final class AccountViewModel {
         self.managedObjectContext = managedObjectContext
         self.authManager = authManager
     }
+    
+    // MARK: - Authentication
+    
+    func isUserSignedIn() -> Bool {
+        return authManager.isUserSignedIn()
+    }
 }
