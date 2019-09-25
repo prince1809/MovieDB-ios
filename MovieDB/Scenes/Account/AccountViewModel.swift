@@ -16,6 +16,11 @@ final class AccountViewModel {
     
     private var authClient = AuthClient()
     private let accountClient = AccountClient()
+    private var requestToken: String?
+    
+    var showAuthPermission: (() -> Void)?
+    var didSignIn: (() -> Void)?
+    var didReceiveError: (() -> Void)?
     
     // MARK: - Initializers
     init(managedObjectContext: NSManagedObjectContext = PersistenceManager.shared.mainContext,
@@ -28,5 +33,20 @@ final class AccountViewModel {
     
     func isUserSignedIn() -> Bool {
         return authManager.isUserSignedIn()
+    }
+    
+    func getRequestToken() {
+        let readAccessToken = authManager.readAccessToken
+        authClient.getRequestToken(with: readAccessToken) { result in
+            switch result {
+            case .success(let requestToken):
+                self.requestToken = requestToken.token
+                self.showAuthPermission?()
+            case .failure(let error):
+                print(error.description)
+                self.didReceiveError?()
+            }
+            
+        }
     }
 }

@@ -22,7 +22,7 @@ extension AuthProvider: Endpoint {
     
     
     var base: String {
-        return "http://api.themoviedb.org"
+        return "https://api.themoviedb.org"
     }
     
     var path: String {

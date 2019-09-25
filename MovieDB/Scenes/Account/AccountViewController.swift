@@ -22,23 +22,49 @@ class AccountViewController: UIViewController {
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
-        print("view loaded")
         super.viewDidLoad()
         setupUI()
+        setupBindables()
     }
     
     // MARK: - Private
     
     private func setupUI() {
+        title = Constants.Title
         setupContainerView()
+        setupNavigationBar()
     }
     
     private func setupContainerView() {
-        showSignInView()
+        viewModel.isUserSignedIn() ? showSignInView() : showSignInView()
+    }
+    
+    
+    private func setupNavigationBar() {
+        navigationItem.title = Constants.NavigationItemTitle
     }
     
     private func showSignInView(withAnimatedNavigationBar animated: Bool = false) {
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+        //remove(asChildViewController: profileV)
         add(asChildViewController: signInViewController)
+    }
+    
+    // MARK: - Reactive Behaviour
+    
+    private func setupBindables() {
+        viewModel.showAuthPermission = { [weak self] in
+            guard let strongSelf = self else { return }
+            //strongSelf.performSegue(withIdentifier: .authPermission)
+            
+        }
+        
+        viewModel.didReceiveError = { [weak self] in
+            guard let strongSelf = self else { return }
+            DispatchQueue.main.async {
+                strongSelf.signInViewController.stopLoading()
+            }
+        }
     }
 }
 
@@ -49,7 +75,7 @@ extension AccountViewController: SignInViewControllerDelegate {
     
     func signInViewController(_ signInViewController: SignInViewController, didTapSignInButton tapped: Bool) {
         signInViewController.startLoading()
-        print("logging in....")
+        viewModel.getRequestToken()
     }
 }
 

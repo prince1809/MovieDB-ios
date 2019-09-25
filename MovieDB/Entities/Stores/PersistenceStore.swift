@@ -36,4 +36,39 @@ class PersistenceStore<Entity: NSManagedObject>: NSObject, NSFetchedResultsContr
         super.init()
     }
     
+    // MARK: - Public
+    
+    func configureResultsController(batchSize: Int = 5, limit: Int = 0,
+                                    sortDescriptors: [NSSortDescriptor] = [],
+                                    predicate: NSPredicate? = nil,
+                                    notifyChangesOn changeTypes: [NSFetchedResultsChangeType] = [.insert, .delete, .move, .update]) {
+        
+        guard let entityName = Entity.entity().name else { fatalError() }
+        
+        let request = NSFetchRequest<Entity>(entityName: entityName)
+        request.fetchBatchSize = batchSize
+        request.fetchLimit = limit
+        request.predicate = predicate
+        request.sortDescriptors = sortDescriptors
+        request.returnsObjectsAsFaults = false
+        
+        self.changeTypes = changeTypes
+        
+        fetchedResultsController = NSFetchedResultsController(fetchRequest: request,
+                                                              managedObjectContext: managedObjectContext,
+                                                              sectionNameKeyPath: nil,
+                                                              cacheName: nil)
+        fetchedResultsController.delegate = self
+        
+        performFetch()
+    }
+    
+    func performFetch() {
+        do {
+            try fetchedResultsController.performFetch()
+        } catch {
+            fatalError(error.localizedDescription)
+        }
+    }
+    
 }

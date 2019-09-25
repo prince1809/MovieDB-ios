@@ -27,4 +27,18 @@ extension UIViewController {
         
         viewController.didMove(toParent: self)
     }
+    
+    func remove(asChildViewController viewController: UIViewController) {
+        viewController.willMove(toParent: nil)
+        viewController.view.removeFromSuperview()
+        viewController.removeFromParent()
+    }
+    
+    // MARK: - Navigation Controller
+    
+    func setTitleAnimated(_ title: String?,
+                          with transitionType: CATransitionType = .fade,
+                          animated: Bool = false) {
+        
+    }
 }
