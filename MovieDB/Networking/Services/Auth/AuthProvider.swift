@@ -28,9 +28,9 @@ extension AuthProvider: Endpoint {
     var path: String {
         switch self {
         case .getRequestToken:
-            return "/v4/auth/request_token"
+            return "/4/auth/request_token"
         case .getAccessToken:
-            return "/v4/auth/access_token"
+            return "/4/auth/access_token"
         case .createSessionId:
             return "/3/authentication/session/convert/4"
         }

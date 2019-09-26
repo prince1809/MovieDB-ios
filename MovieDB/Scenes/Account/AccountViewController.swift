@@ -8,10 +8,17 @@
 
 import UIKit
 
-class AccountViewController: UIViewController {
+class AccountViewController: UIViewController, SegueHandler {
     
     private lazy var signInViewController: SignInViewController = {
         var viewController = self.storyboard?.instantiateViewController(withIdentifier: "LoginViewController") as! SignInViewController
+        viewController.delegate = self
+        self.add(asChildViewController: viewController)
+        return viewController
+    }()
+    
+    private lazy var profileViewController: ProfileTableViewController = {
+        var viewController = self.storyboard?.instantiateViewController(withIdentifier: "ProfileTableViewController") as! ProfileTableViewController
         viewController.delegate = self
         self.add(asChildViewController: viewController)
         return viewController
@@ -50,13 +57,31 @@ class AccountViewController: UIViewController {
         add(asChildViewController: signInViewController)
     }
     
+    private func showProfileView(withAnimatedNavigationBar animated: Bool = false) {
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+        remove(asChildViewController: signInViewController)
+        // Rebuild the profile view model to show an up to date profile.
+        //profileViewController.viewModel
+    }
+    
+    private func didSignIn() {
+        
+    }
+    
     // MARK: - Reactive Behaviour
     
     private func setupBindables() {
+        
         viewModel.showAuthPermission = { [weak self] in
             guard let strongSelf = self else { return }
-            //strongSelf.performSegue(withIdentifier: .authPermission)
-            
+            strongSelf.performSegue(withIdentifier: .authPermission)
+        }
+        
+        viewModel.didSignIn = { [weak self] in
+            guard let strongSelf = self else { return }
+            DispatchQueue.main.async {
+                strongSelf.didSignIn()
+            }
         }
         
         viewModel.didReceiveError = { [weak self] in
@@ -78,6 +103,26 @@ extension AccountViewController: SignInViewControllerDelegate {
         viewModel.getRequestToken()
     }
 }
+
+// MARK: - ProfileViewControllerDelegate
+
+extension AccountViewController: ProfileViewControllerDelegate {
+    
+    func profileViewController(didTapCollection collection: ProfileCollectionOption) {
+        
+    }
+    
+    func profileViewController(didTapGroup group: ProfileGroupOption) {
+        
+    }
+    
+    func profileViewController(didTapSignOutButton tapped: Bool) {
+        
+    }
+}
+
+
+// MARK: - Segue Identifiers
 
 extension AccountViewController {
     

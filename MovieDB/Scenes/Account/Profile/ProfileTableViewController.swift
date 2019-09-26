@@ -21,4 +21,23 @@ class ProfileTableViewController: UITableViewController {
     
     private var dataSource: ProfileDataSource!
     
+    weak var delegate: ProfileViewControllerDelegate?
+    
+    
+    // MARK: - Lifecycle
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupUI()
+    }
+    
+    private func setupUI() {
+        
+    }
+    
+    private func setupTableView() {
+        tableView.delegate = self
+        //tableView.registerNib(cellType: ProfileAccount)
+    }
+    
 }

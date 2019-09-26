@@ -56,6 +56,8 @@
 		A32D8339232E913C005AB288 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32D8338232E913C005AB288 /* Endpoint.swift */; };
 		A32D833B232E9148005AB288 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32D833A232E9148005AB288 /* Keys.swift */; };
 		A32D833E232E9450005AB288 /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32D833D232E9450005AB288 /* AuthenticationManager.swift */; };
+		A37DC711233D10540048FC8A /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37DC710233D10540048FC8A /* UITableView+Extensions.swift */; };
+		A37DC713233D19B40048FC8A /* SegueHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37DC712233D19B40048FC8A /* SegueHandler.swift */; };
 		A392632C232D10880052238C /* UpcomingMovies.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A392632B232D10880052238C /* UpcomingMovies.storyboard */; };
 		A392632E232D11240052238C /* MovieDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A392632D232D11240052238C /* MovieDetail.storyboard */; };
 		A3926332232D14600052238C /* UpcomingMoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3926331232D14600052238C /* UpcomingMoviesViewController.swift */; };
@@ -155,6 +157,8 @@
 		A32D8338232E913C005AB288 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		A32D833A232E9148005AB288 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		A32D833D232E9450005AB288 /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
+		A37DC710233D10540048FC8A /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
+		A37DC712233D19B40048FC8A /* SegueHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueHandler.swift; sourceTree = "<group>"; };
 		A392632B232D10880052238C /* UpcomingMovies.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UpcomingMovies.storyboard; sourceTree = "<group>"; };
 		A392632D232D11240052238C /* MovieDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MovieDetail.storyboard; sourceTree = "<group>"; };
 		A3926331232D14600052238C /* UpcomingMoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingMoviesViewController.swift; sourceTree = "<group>"; };
@@ -294,6 +298,7 @@
 				A3D3D8D92331C54B00BD26B8 /* NibLoadable.swift */,
 				A3D3D8EC2332339C00BD26B8 /* TabBarScrollable.swift */,
 				A3D3D8F22332505B00BD26B8 /* Loadable.swift */,
+				A37DC712233D19B40048FC8A /* SegueHandler.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -603,6 +608,7 @@
 				A3D3D8F6233278DB00BD26B8 /* URLRequest+Extensions.swift */,
 				A3D3D8F823327AD200BD26B8 /* Dictionary+Extensions.swift */,
 				A32BE7412338EBF10095B51D /* CGRect+Extensions.swift */,
+				A37DC710233D10540048FC8A /* UITableView+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -838,6 +844,7 @@
 				A30BFC16232F0B4C005B02FE /* Managed.swift in Sources */,
 				A3C8624B232AA364000CF79B /* SplashViewController.swift in Sources */,
 				A30BFC25232F5C94005B02FE /* Genre.swift in Sources */,
+				A37DC713233D19B40048FC8A /* SegueHandler.swift in Sources */,
 				A3F6DAB0233A0BDC001E2287 /* ProfileOptions.swift in Sources */,
 				A30BFC41232F825A005B02FE /* UpcomingMovieCellViewModel.swift in Sources */,
 				A3F8C823232BF5A5002CFEA4 /* MainTabBarControlller.swift in Sources */,
@@ -851,6 +858,7 @@
 				A3F6DAB6233A2400001E2287 /* MarkAsFavoriteResult.swift in Sources */,
 				A32D8329232E4F2C005AB288 /* ShrinkingButton.swift in Sources */,
 				A3F6DAA22339ED9A001E2287 /* RequestTokenResult.swift in Sources */,
+				A37DC711233D10540048FC8A /* UITableView+Extensions.swift in Sources */,
 				A30BFC13232F0A27005B02FE /* User.swift in Sources */,
 				A3F6DAA42339EE63001E2287 /* AuthProvider.swift in Sources */,
 				A3D3D8F32332505B00BD26B8 /* Loadable.swift in Sources */,
