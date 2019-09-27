@@ -57,6 +57,7 @@
 		A32D833B232E9148005AB288 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32D833A232E9148005AB288 /* Keys.swift */; };
 		A32D833E232E9450005AB288 /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32D833D232E9450005AB288 /* AuthenticationManager.swift */; };
 		A360F088233E51FB00E3CF54 /* AuthPermissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A360F087233E51FB00E3CF54 /* AuthPermissionViewController.swift */; };
+		A360F08A233E5F7E00E3CF54 /* AuthPermissionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A360F089233E5F7E00E3CF54 /* AuthPermissionViewModel.swift */; };
 		A37DC711233D10540048FC8A /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37DC710233D10540048FC8A /* UITableView+Extensions.swift */; };
 		A37DC713233D19B40048FC8A /* SegueHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37DC712233D19B40048FC8A /* SegueHandler.swift */; };
 		A392632C232D10880052238C /* UpcomingMovies.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A392632B232D10880052238C /* UpcomingMovies.storyboard */; };
@@ -159,6 +160,7 @@
 		A32D833A232E9148005AB288 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		A32D833D232E9450005AB288 /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
 		A360F087233E51FB00E3CF54 /* AuthPermissionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthPermissionViewController.swift; sourceTree = "<group>"; };
+		A360F089233E5F7E00E3CF54 /* AuthPermissionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthPermissionViewModel.swift; sourceTree = "<group>"; };
 		A37DC710233D10540048FC8A /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
 		A37DC712233D19B40048FC8A /* SegueHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueHandler.swift; sourceTree = "<group>"; };
 		A392632B232D10880052238C /* UpcomingMovies.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UpcomingMovies.storyboard; sourceTree = "<group>"; };
@@ -464,6 +466,7 @@
 			isa = PBXGroup;
 			children = (
 				A360F087233E51FB00E3CF54 /* AuthPermissionViewController.swift */,
+				A360F089233E5F7E00E3CF54 /* AuthPermissionViewModel.swift */,
 			);
 			path = AuthPermission;
 			sourceTree = "<group>";
@@ -914,6 +917,7 @@
 				A3F6DAB4233A1A78001E2287 /* List.swift in Sources */,
 				A30BFC18232F171B005B02FE /* NSManagedObjectContext+Extensions.swift in Sources */,
 				A3D3D8CF2331C27700BD26B8 /* PlaceholderDisplayable.swift in Sources */,
+				A360F08A233E5F7E00E3CF54 /* AuthPermissionViewModel.swift in Sources */,
 				A30BFC1A232F1846005B02FE /* CodingUserInfoKey+Context.swift in Sources */,
 				A3D3D8F923327AD200BD26B8 /* Dictionary+Extensions.swift in Sources */,
 			);

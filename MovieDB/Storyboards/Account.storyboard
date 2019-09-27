@@ -129,11 +129,23 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gZz-T6-xCi">
                                 <rect key="frame" x="0.0" y="675" width="375" height="49"/>
                                 <items>
-                                    <barButtonItem image="Back" id="Vql-d7-q0G" userLabel="Back Bar Button Item"/>
+                                    <barButtonItem image="Back" id="Vql-d7-q0G" userLabel="Back Bar Button Item">
+                                        <connections>
+                                            <action selector="backButtonPressed:" destination="fxp-tH-51J" id="4QD-tV-eDA"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem width="42" systemItem="fixedSpace" id="B5f-MT-qfJ"/>
-                                    <barButtonItem title="Item" image="Forward" id="mKe-Bh-xlQ" userLabel="Forward Bar Button Item"/>
+                                    <barButtonItem title="Item" image="Forward" id="mKe-Bh-xlQ" userLabel="Forward Bar Button Item">
+                                        <connections>
+                                            <action selector="forwardButtonPressed:" destination="fxp-tH-51J" id="eJo-Pf-Ey8"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="8uW-An-C7i"/>
-                                    <barButtonItem systemItem="refresh" id="l1S-dG-Fon"/>
+                                    <barButtonItem systemItem="refresh" id="l1S-dG-Fon">
+                                        <connections>
+                                            <action selector="reloadButtonPressed:" destination="fxp-tH-51J" id="nVU-d7-aNz"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -150,6 +162,12 @@
                         <viewLayoutGuide key="safeArea" id="uQH-XM-l7s"/>
                     </view>
                     <navigationItem key="navigationItem" id="QO8-KG-gja"/>
+                    <connections>
+                        <outlet property="backButton" destination="Vql-d7-q0G" id="S4l-DS-RIs"/>
+                        <outlet property="forwardButton" destination="mKe-Bh-xlQ" id="p6U-fw-sfN"/>
+                        <outlet property="reloadButton" destination="l1S-dG-Fon" id="LCl-IY-r8V"/>
+                        <outlet property="webView" destination="mfz-BH-03K" id="4ym-hq-JIA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LqH-Ro-usU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

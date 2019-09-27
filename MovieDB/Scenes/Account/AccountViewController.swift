@@ -91,6 +91,21 @@ class AccountViewController: UIViewController, SegueHandler {
             }
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segueIdentifier(for: segue) {
+        case .authPermission:
+            guard let navController = segue.destination as? UINavigationController,
+                let viewController = navController.topViewController as? AuthPermissionViewController else {
+                    fatalError()
+            }
+            _ = viewController.view
+            viewController.delegate = self
+            viewController.viewModel = viewModel.buildAuthPermissionViewModel()
+        default:
+            print("")
+        }
+    }
 }
 
 
@@ -118,6 +133,15 @@ extension AccountViewController: ProfileViewControllerDelegate {
     
     func profileViewController(didTapSignOutButton tapped: Bool) {
         
+    }
+}
+
+// MARK: - AuthPermissionViewControllerDelegate
+
+extension AccountViewController: AuthPermissionViewControllerDelegate {
+    
+    func authPermissionViewController(_ authPermissionViewController: AuthPermissionViewController, didSignedIn signedIn: Bool) {
+        print("sign in")
     }
 }
 

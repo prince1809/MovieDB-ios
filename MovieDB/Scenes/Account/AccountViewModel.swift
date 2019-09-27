@@ -49,4 +49,11 @@ final class AccountViewModel {
             
         }
     }
+    
+    // MARK: - View Model building
+    
+    func buildAuthPermissionViewModel() -> AuthPermissionViewModel? {
+        guard let requestToken = requestToken else { return nil }
+        return AuthPermissionViewModel(requestToken: requestToken)
+    }
 }
