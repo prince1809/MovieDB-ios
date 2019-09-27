@@ -102,10 +102,58 @@
                         <viewLayoutGuide key="safeArea" id="46W-Hj-fJ0"/>
                     </view>
                     <navigationItem key="navigationItem" id="T4g-AX-N5x"/>
+                    <connections>
+                        <segue destination="Pyc-BN-L60" kind="presentation" identifier="AuthPermissionSegue" id="tIC-GZ-jZv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DcG-HN-AAO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="815.94202898550736" y="-30.133928571428569"/>
+        </scene>
+        <!--Auth Permission View Controller-->
+        <scene sceneID="hJb-BR-7di">
+            <objects>
+                <viewController id="fxp-tH-51J" customClass="AuthPermissionViewController" customModule="MovieDB" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CEl-IV-TEq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mfz-BH-03K">
+                                <rect key="frame" x="0.0" y="56" width="375" height="619"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gZz-T6-xCi">
+                                <rect key="frame" x="0.0" y="675" width="375" height="49"/>
+                                <items>
+                                    <barButtonItem image="Back" id="Vql-d7-q0G" userLabel="Back Bar Button Item"/>
+                                    <barButtonItem width="42" systemItem="fixedSpace" id="B5f-MT-qfJ"/>
+                                    <barButtonItem title="Item" image="Forward" id="mKe-Bh-xlQ" userLabel="Forward Bar Button Item"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="8uW-An-C7i"/>
+                                    <barButtonItem systemItem="refresh" id="l1S-dG-Fon"/>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="gZz-T6-xCi" firstAttribute="trailing" secondItem="uQH-XM-l7s" secondAttribute="trailing" id="0Ge-Ab-amF"/>
+                            <constraint firstItem="gZz-T6-xCi" firstAttribute="top" secondItem="mfz-BH-03K" secondAttribute="bottom" id="0ge-WC-gSh"/>
+                            <constraint firstItem="mfz-BH-03K" firstAttribute="top" secondItem="uQH-XM-l7s" secondAttribute="top" id="6gT-1U-s30"/>
+                            <constraint firstItem="gZz-T6-xCi" firstAttribute="leading" secondItem="uQH-XM-l7s" secondAttribute="leading" id="8ua-KS-UeH"/>
+                            <constraint firstItem="mfz-BH-03K" firstAttribute="leading" secondItem="uQH-XM-l7s" secondAttribute="leading" id="Cer-mh-ITO"/>
+                            <constraint firstItem="uQH-XM-l7s" firstAttribute="trailing" secondItem="mfz-BH-03K" secondAttribute="trailing" id="YN5-BJ-Nu8"/>
+                            <constraint firstItem="uQH-XM-l7s" firstAttribute="bottom" secondItem="gZz-T6-xCi" secondAttribute="bottom" id="thl-Qp-uz8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="uQH-XM-l7s"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="QO8-KG-gja"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LqH-Ro-usU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2087" y="715"/>
         </scene>
         <!--Account-->
         <scene sceneID="YWC-rI-3BK">
@@ -127,9 +175,29 @@
             </objects>
             <point key="canvasLocation" x="-94.20289855072464" y="-30.133928571428569"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="TeJ-Sb-caZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Pyc-BN-L60" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZK4-X7-saP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="fxp-tH-51J" kind="relationship" relationship="rootViewController" id="Shw-FD-Zyl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fqy-Oz-0bn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="815" y="716"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Account" width="25" height="25"/>
+        <image name="Back" width="24" height="24"/>
+        <image name="Forward" width="24" height="24"/>
         <image name="Help" width="33" height="33"/>
         <image name="LoginLogo" width="100" height="100"/>
     </resources>

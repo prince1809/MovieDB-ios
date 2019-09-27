@@ -56,6 +56,7 @@
 		A32D8339232E913C005AB288 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32D8338232E913C005AB288 /* Endpoint.swift */; };
 		A32D833B232E9148005AB288 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32D833A232E9148005AB288 /* Keys.swift */; };
 		A32D833E232E9450005AB288 /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32D833D232E9450005AB288 /* AuthenticationManager.swift */; };
+		A360F088233E51FB00E3CF54 /* AuthPermissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A360F087233E51FB00E3CF54 /* AuthPermissionViewController.swift */; };
 		A37DC711233D10540048FC8A /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37DC710233D10540048FC8A /* UITableView+Extensions.swift */; };
 		A37DC713233D19B40048FC8A /* SegueHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37DC712233D19B40048FC8A /* SegueHandler.swift */; };
 		A392632C232D10880052238C /* UpcomingMovies.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A392632B232D10880052238C /* UpcomingMovies.storyboard */; };
@@ -157,6 +158,7 @@
 		A32D8338232E913C005AB288 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		A32D833A232E9148005AB288 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		A32D833D232E9450005AB288 /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
+		A360F087233E51FB00E3CF54 /* AuthPermissionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthPermissionViewController.swift; sourceTree = "<group>"; };
 		A37DC710233D10540048FC8A /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
 		A37DC712233D19B40048FC8A /* SegueHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueHandler.swift; sourceTree = "<group>"; };
 		A392632B232D10880052238C /* UpcomingMovies.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UpcomingMovies.storyboard; sourceTree = "<group>"; };
@@ -370,6 +372,7 @@
 		A32D8322232E4BB5005AB288 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				A360F086233E51DA00E3CF54 /* AuthPermission */,
 				A32D8323232E4BD9005AB288 /* SignInViewController.swift */,
 			);
 			path = Authentication;
@@ -455,6 +458,14 @@
 				A30BFC0C232F0668005B02FE /* PersistenceManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		A360F086233E51DA00E3CF54 /* AuthPermission */ = {
+			isa = PBXGroup;
+			children = (
+				A360F087233E51FB00E3CF54 /* AuthPermissionViewController.swift */,
+			);
+			path = AuthPermission;
 			sourceTree = "<group>";
 		};
 		A392632F232D14230052238C /* Movies */ = {
@@ -876,6 +887,7 @@
 				A32D8324232E4BD9005AB288 /* SignInViewController.swift in Sources */,
 				A30BFC4E232FD4D0005B02FE /* ViewState.swift in Sources */,
 				A30BFC33232F6F76005B02FE /* File.swift in Sources */,
+				A360F088233E51FB00E3CF54 /* AuthPermissionViewController.swift in Sources */,
 				A3D3D8D62331C4B300BD26B8 /* ErrorPlaceholderView.swift in Sources */,
 				A32D8337232E912B005AB288 /* APIError.swift in Sources */,
 				A30BFC11232F0725005B02FE /* PersistenceStore.swift in Sources */,
