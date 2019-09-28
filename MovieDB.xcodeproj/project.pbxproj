@@ -56,6 +56,11 @@
 		A32D8339232E913C005AB288 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32D8338232E913C005AB288 /* Endpoint.swift */; };
 		A32D833B232E9148005AB288 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32D833A232E9148005AB288 /* Keys.swift */; };
 		A32D833E232E9450005AB288 /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32D833D232E9450005AB288 /* AuthenticationManager.swift */; };
+		A344B743233F0DDE007836A9 /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A344B742233F0DDE007836A9 /* MovieDetailViewController.swift */; };
+		A344B745233F0DFE007836A9 /* MovieDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A344B744233F0DFE007836A9 /* MovieDetailViewModel.swift */; };
+		A344B748233F1934007836A9 /* MovieDetailBackdropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A344B747233F1934007836A9 /* MovieDetailBackdropView.swift */; };
+		A344B74A233F3974007836A9 /* VoteAverageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A344B749233F3974007836A9 /* VoteAverageView.swift */; };
+		A344B74C233F3D82007836A9 /* MovieDetailOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A344B74B233F3D82007836A9 /* MovieDetailOptionView.swift */; };
 		A360F088233E51FB00E3CF54 /* AuthPermissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A360F087233E51FB00E3CF54 /* AuthPermissionViewController.swift */; };
 		A360F08A233E5F7E00E3CF54 /* AuthPermissionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A360F089233E5F7E00E3CF54 /* AuthPermissionViewModel.swift */; };
 		A37DC711233D10540048FC8A /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37DC710233D10540048FC8A /* UITableView+Extensions.swift */; };
@@ -159,6 +164,11 @@
 		A32D8338232E913C005AB288 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		A32D833A232E9148005AB288 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		A32D833D232E9450005AB288 /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
+		A344B742233F0DDE007836A9 /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
+		A344B744233F0DFE007836A9 /* MovieDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewModel.swift; sourceTree = "<group>"; };
+		A344B747233F1934007836A9 /* MovieDetailBackdropView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailBackdropView.swift; sourceTree = "<group>"; };
+		A344B749233F3974007836A9 /* VoteAverageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteAverageView.swift; sourceTree = "<group>"; };
+		A344B74B233F3D82007836A9 /* MovieDetailOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailOptionView.swift; sourceTree = "<group>"; };
 		A360F087233E51FB00E3CF54 /* AuthPermissionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthPermissionViewController.swift; sourceTree = "<group>"; };
 		A360F089233E5F7E00E3CF54 /* AuthPermissionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthPermissionViewModel.swift; sourceTree = "<group>"; };
 		A37DC710233D10540048FC8A /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
@@ -417,6 +427,7 @@
 				A32D832B232E516E005AB288 /* GradientView.swift */,
 				A3D3D8C82331ACCA00BD26B8 /* RadarView.swift */,
 				A3D3D8E12331E48100BD26B8 /* DefaultRefreshControl.swift */,
+				A344B749233F3974007836A9 /* VoteAverageView.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -462,6 +473,25 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
+		A344B741233F0DB2007836A9 /* MovieDetail */ = {
+			isa = PBXGroup;
+			children = (
+				A344B746233F1926007836A9 /* Components */,
+				A344B742233F0DDE007836A9 /* MovieDetailViewController.swift */,
+				A344B744233F0DFE007836A9 /* MovieDetailViewModel.swift */,
+			);
+			path = MovieDetail;
+			sourceTree = "<group>";
+		};
+		A344B746233F1926007836A9 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				A344B747233F1934007836A9 /* MovieDetailBackdropView.swift */,
+				A344B74B233F3D82007836A9 /* MovieDetailOptionView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		A360F086233E51DA00E3CF54 /* AuthPermission */ = {
 			isa = PBXGroup;
 			children = (
@@ -477,6 +507,7 @@
 				A30BFC1D232F1F91005B02FE /* MoviesViewModel.swift */,
 				A3926335232D18630052238C /* SearchMovies */,
 				A3926330232D14300052238C /* UpcomingMovies */,
+				A344B741233F0DB2007836A9 /* MovieDetail */,
 			);
 			path = Movies;
 			sourceTree = "<group>";
@@ -862,7 +893,9 @@
 				A3F6DAB0233A0BDC001E2287 /* ProfileOptions.swift in Sources */,
 				A30BFC41232F825A005B02FE /* UpcomingMovieCellViewModel.swift in Sources */,
 				A3F8C823232BF5A5002CFEA4 /* MainTabBarControlller.swift in Sources */,
+				A344B745233F0DFE007836A9 /* MovieDetailViewModel.swift in Sources */,
 				A3D3D8F123324EC400BD26B8 /* UIRefreshControl+Extensions.swift in Sources */,
+				A344B74C233F3D82007836A9 /* MovieDetailOptionView.swift in Sources */,
 				A30BFC23232F2E52005B02FE /* MovieProvider.swift in Sources */,
 				A30BFC43232F827E005B02FE /* UpcomingMovieCollectionViewCell.swift in Sources */,
 				A3D3D8E823322EC400BD26B8 /* CollectionViewPrefetching.swift in Sources */,
@@ -883,7 +916,9 @@
 				A30BFC0D232F0668005B02FE /* PersistenceManager.swift in Sources */,
 				A30BFC4C232FD3CB005B02FE /* Bindable.swift in Sources */,
 				A3E74CDF232C7A39002D75A3 /* UIViewController+Extensions.swift in Sources */,
+				A344B74A233F3974007836A9 /* VoteAverageView.swift in Sources */,
 				A30BFC2D232F62B4005B02FE /* Movie.swift in Sources */,
+				A344B748233F1934007836A9 /* MovieDetailBackdropView.swift in Sources */,
 				A3926337232D18AE0052238C /* SearchMoviesViewController.swift in Sources */,
 				A3D3D8C92331ACCA00BD26B8 /* RadarView.swift in Sources */,
 				A3C86249232AA364000CF79B /* AppDelegate.swift in Sources */,
@@ -913,6 +948,7 @@
 				A3D3D8D12331C2A800BD26B8 /* Retryable.swift in Sources */,
 				A32D8321232E464A005AB288 /* AccountViewController.swift in Sources */,
 				A3D3D8DE2331D7C500BD26B8 /* EmptyPlaceholderView.swift in Sources */,
+				A344B743233F0DDE007836A9 /* MovieDetailViewController.swift in Sources */,
 				A3D3D8F52332758900BD26B8 /* LocalizationHelper.swift in Sources */,
 				A3F6DAB4233A1A78001E2287 /* List.swift in Sources */,
 				A30BFC18232F171B005B02FE /* NSManagedObjectContext+Extensions.swift in Sources */,

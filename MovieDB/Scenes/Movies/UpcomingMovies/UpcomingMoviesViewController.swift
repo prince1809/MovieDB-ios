@@ -184,7 +184,18 @@ extension UpcomingMoviesViewController: TabBarScrollable {
 extension UpcomingMoviesViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let cellAttributes = collectionView.layoutAttributesForItem(at: indexPath),
+            let cell = collectionView.cellForItem(at: indexPath) as? UpcomingMoviePreviewCollectionViewCell else {
+                return
+        }
         
+        let imageToTransition = cell.posterImageView.image
+        let selectedFrame = collectionView.convert(cellAttributes.frame, to: collectionView.superview)
+        
+        navigationManager.configure(selectedFrame: selectedFrame, with: imageToTransition)
+        
+        viewModel.setSelectedMovie(at: indexPath.row)
+        performSegue(withIdentifier: SegueIndentifier.movieDetail.rawValue, sender: indexPath)
     }
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {

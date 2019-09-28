@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -49,11 +47,22 @@
                     <connections>
                         <outlet property="collectionView" destination="R5x-LF-kpN" id="DvA-jD-xDE"/>
                         <outlet property="toggleGridBarButtonItem" destination="1g3-cJ-1eW" id="38d-H1-SFi"/>
+                        <segue destination="QQp-Cj-Pmz" kind="show" identifier="MovieDetailSegue" id="UMK-oA-N6D"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ibQ-N2-U2u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="563.768115942029" y="75"/>
+        </scene>
+        <!--MovieDetailViewController-->
+        <scene sceneID="atV-TV-tFQ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MovieDetail" referencedIdentifier="MovieDetailViewController" id="QQp-Cj-Pmz" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Ope-EQ-USv"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tUh-d9-aSZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1260" y="44"/>
         </scene>
         <!--Upcoming-->
         <scene sceneID="bKQ-h2-Yf0">
