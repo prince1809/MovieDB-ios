@@ -20,9 +20,10 @@ class MovieDetailViewController: UIViewController, Retryable, Transitionable, Se
     @IBOutlet weak var releaseDateLabel: UILabel!
     @IBOutlet weak var overviewLabel: UILabel!
     
-//    lazy var shareBarButtonItem: UIBarButtonItem = {
-//        let barButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: <#T##Any?#>, action: <#T##Selector?#>)
-//    }
+    lazy var shareBarButtonItem: UIBarButtonItem = {
+        let barButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(shareBarButtonAction(_:)))
+        return barButtonItem
+    }()
     
     var loaderView: RadarView!
     
@@ -46,7 +47,10 @@ class MovieDetailViewController: UIViewController, Retryable, Transitionable, Se
         navigationController?.navigationBar.setBackgroundImage(nil, for: .default)
         navigationController?.navigationBar.shadowImage = nil
         
-        //guard let viewModel = viewModel, 
+        guard let viewModel = viewModel, !viewModel.startLoading.value else {
+            return
+        }
+        
     }
     
     // MARK: - Private
@@ -63,6 +67,12 @@ class MovieDetailViewController: UIViewController, Retryable, Transitionable, Se
         navigationItem.rightBarButtonItems =  []
     }
     
+    private func configureNavigationBar(isFavorite: Bool?) {
+        if let isFavorite = isFavorite {
+            //favoriteBar
+        }
+    }
+    
     // MARK: - Reactive Behaviour
     
     private func setupBindables() {
@@ -77,8 +87,44 @@ class MovieDetailViewController: UIViewController, Retryable, Transitionable, Se
         releaseDateLabel.text = viewModel.releaseDate
         
         backdropImageView.kf.indicatorType = .activity
+        backdropImageView.kf.setImage(with: viewModel.backdropURL)
+        
+        //posterImageView.kf.indicatorType = .activity
+        //posterImageView.kf.setImage(with: viewModel.posterURL)
+        
+        //voteAverageView.vote
     }
-
+    
+    // MARK: - Actions
+    
+    @IBAction func shareBarButtonAction(_ sender: Any) {
+        guard let movieTitle = viewModel?.title else { return }
+        let shareText = "Come with me to watch \(movieTitle)!"
+        let activityViewController = UIActivityViewController(activityItems: [shareText], applicationActivities: nil)
+        present(activityViewController, animated: true, completion: nil)
+    }
+    
+    @IBAction func favoriteButtonAction(_ sender: Any) {
+        //viewModel?.
+    }
+    
+    @IBAction func reviewsOptionAction(_ sender: Any) {
+        performSegue(withIdentifier: SegueIdentifier.movieReviews.rawValue, sender: nil)
+    }
+    
+    @IBAction func trailersOptionAction(_ sender: Any) {
+        performSegue(withIdentifier: SegueIdentifier.movieVideos.rawValue, sender: nil)
+    }
+    
+    @IBAction func creditsOptionAction(_ sender: Any) {
+        performSegue(withIdentifier: SegueIdentifier.movieCredits.rawValue, sender: nil)
+    }
+    
+    @IBAction func similarsOptionAction(_ sender: Any) {
+        performSegue(withIdentifier: SegueIdentifier.movieSimilars.rawValue, sender: nil)
+    }
+    
+    
 }
 
 
@@ -89,5 +135,7 @@ extension MovieDetailViewController {
     enum SegueIdentifier: String {
         case movieVideos = "MovieVideosSegue"
         case movieReviews = "MovieReviewSegue"
+        case movieSimilars = "MovieSimilarsSegue"
+        case movieCredits = "MovieCreditsSegue"
     }
 }

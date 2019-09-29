@@ -20,11 +20,24 @@ final class MovieDetailViewModel {
     var genre: String?
     var releaseDate: String?
     var overview: String?
+    var voteAverage: Double?
+    var posterPath: String?
+    var posterURL: URL?
+    var backdropPath: String?
+    var backdropURL: URL?
+    
+    var showErrorView: Bindable<Error?> = Bindable(nil)
+    var updateMovieDetail: (() -> Void)?
+    var needsFetch = false
+    
+    var startLoading: Bindable<Bool> = Bindable(false)
+    var isFavorite: Bindable<Bool?> = Bindable(false)
     
     // MARK: - Initializers
     
     init(_ movie: Movie, managedObjectContext: NSManagedObjectContext) {
         self.managedObjectContext = managedObjectContext
+        setupStores(self.managedObjectContext)
         setupMovie(movie)
     }
     
@@ -32,7 +45,8 @@ final class MovieDetailViewModel {
         self.id = id
         self.title = title
         self.managedObjectContext = managedObjectContext
-        //self.
+        self.needsFetch = true
+        setupStores(self.managedObjectContext)
     }
     
     // MARK: - Private
@@ -43,9 +57,13 @@ final class MovieDetailViewModel {
         genre = movie.genreName
         releaseDate = movie.releaseDate
         overview = movie.overview
+        posterPath = movie.posterPath
+        posterURL = movie.posterURL
+        backdropPath = movie.backdropPath
+        backdropURL = movie.backdropURL
     }
     
     private func setupStores(_ managedObjectContext: NSManagedObjectContext) {
-        
+       // movieSto
     }
 }

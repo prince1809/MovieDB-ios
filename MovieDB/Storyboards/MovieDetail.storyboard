@@ -25,6 +25,22 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bui-FV-xGw" userLabel="Backdrop View">
                                                 <rect key="frame" x="0.0" y="0.0" width="432" height="200"/>
                                                 <subviews>
+                                                    <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="nCZ-q5-IGd" userLabel="Movie Detail Backdrop View" customClass="MovieDetailBackdropView" customModule="MovieDB" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="432" height="200"/>
+                                                        <subviews>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4Ol-WN-G92" userLabel="Backdrop Image View">
+                                                                <rect key="frame" x="0.0" y="0.0" width="432" height="200"/>
+                                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstItem="4Ol-WN-G92" firstAttribute="leading" secondItem="nCZ-q5-IGd" secondAttribute="leading" id="4EF-xy-XoN"/>
+                                                            <constraint firstAttribute="bottom" secondItem="4Ol-WN-G92" secondAttribute="bottom" id="KQZ-27-mio"/>
+                                                            <constraint firstItem="4Ol-WN-G92" firstAttribute="top" secondItem="nCZ-q5-IGd" secondAttribute="top" id="Ub2-wH-feW"/>
+                                                            <constraint firstAttribute="trailing" secondItem="4Ol-WN-G92" secondAttribute="trailing" id="oxv-gM-h9a"/>
+                                                        </constraints>
+                                                    </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6fM-yS-1Me" userLabel="Poster Container View">
                                                         <rect key="frame" x="16" y="52" width="93.5" height="140"/>
                                                         <subviews>
@@ -40,21 +56,6 @@
                                                             <constraint firstAttribute="trailing" secondItem="D7H-rL-29L" secondAttribute="trailing" id="ZD5-Gy-jYQ"/>
                                                             <constraint firstAttribute="height" constant="140" id="s5l-bs-BSf"/>
                                                             <constraint firstAttribute="bottom" secondItem="D7H-rL-29L" secondAttribute="bottom" id="xdz-tr-xWb"/>
-                                                        </constraints>
-                                                    </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nCZ-q5-IGd" userLabel="Movie Detail Backdrop View">
-                                                        <rect key="frame" x="0.0" y="0.0" width="432" height="200"/>
-                                                        <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4Ol-WN-G92" userLabel="Backdrop Image View">
-                                                                <rect key="frame" x="0.0" y="0.0" width="432" height="200"/>
-                                                            </imageView>
-                                                        </subviews>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                                        <constraints>
-                                                            <constraint firstItem="4Ol-WN-G92" firstAttribute="leading" secondItem="nCZ-q5-IGd" secondAttribute="leading" id="4EF-xy-XoN"/>
-                                                            <constraint firstAttribute="bottom" secondItem="4Ol-WN-G92" secondAttribute="bottom" id="KQZ-27-mio"/>
-                                                            <constraint firstItem="4Ol-WN-G92" firstAttribute="top" secondItem="nCZ-q5-IGd" secondAttribute="top" id="Ub2-wH-feW"/>
-                                                            <constraint firstAttribute="trailing" secondItem="4Ol-WN-G92" secondAttribute="trailing" id="oxv-gM-h9a"/>
                                                         </constraints>
                                                     </view>
                                                 </subviews>
@@ -122,6 +123,9 @@
                                                                     <userDefinedRuntimeAttribute type="image" keyPath="optionImage" value="Reviews"/>
                                                                     <userDefinedRuntimeAttribute type="string" keyPath="localizedOptionTitle" value="reviewsDetailOptions"/>
                                                                 </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <outletCollection property="gestureRecognizers" destination="Y1N-7t-Uyc" appends="YES" id="cy5-9q-Jdf"/>
+                                                                </connections>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tb1-09-h58" userLabel="Trailer Movie Detail Options View" customClass="MovieDetailOptionView" customModule="MovieDB" customModuleProvider="target">
                                                                 <rect key="frame" x="108.5" y="0.0" width="106.5" height="72.5"/>
@@ -130,6 +134,9 @@
                                                                     <userDefinedRuntimeAttribute type="image" keyPath="optionImage" value="PlayVideo"/>
                                                                     <userDefinedRuntimeAttribute type="string" keyPath="localizedOptionTitle" value="trailersDetailOptions"/>
                                                                 </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <outletCollection property="gestureRecognizers" destination="3fy-Ta-wWs" appends="YES" id="LnR-O5-Qfw"/>
+                                                                </connections>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vd0-mh-8Uc" userLabel="Cast Movie Detail Options View" customClass="MovieDetailOptionView" customModule="MovieDB" customModuleProvider="target">
                                                                 <rect key="frame" x="217" y="0.0" width="106.5" height="72.5"/>
@@ -138,6 +145,9 @@
                                                                     <userDefinedRuntimeAttribute type="image" keyPath="optionImage" value="Cast"/>
                                                                     <userDefinedRuntimeAttribute type="string" keyPath="localizedOptionTitle" value="creditsDetailOptions"/>
                                                                 </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <outletCollection property="gestureRecognizers" destination="gE8-bO-WQF" appends="YES" id="bUX-Mz-S2q"/>
+                                                                </connections>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MVW-B1-8GY" userLabel="Similar Movie Options View" customClass="MovieDetailOptionView" customModule="MovieDB" customModuleProvider="target">
                                                                 <rect key="frame" x="325.5" y="0.0" width="106.5" height="72.5"/>
@@ -146,6 +156,9 @@
                                                                     <userDefinedRuntimeAttribute type="image" keyPath="optionImage" value="SimilarMovies"/>
                                                                     <userDefinedRuntimeAttribute type="string" keyPath="localizedOptionTitle" value="similarsDetailOptions"/>
                                                                 </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <outletCollection property="gestureRecognizers" destination="R7d-Kq-qp2" appends="YES" id="6Sm-EJ-Xox"/>
+                                                                </connections>
                                                             </view>
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -289,6 +302,26 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z9q-zN-TII" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Y1N-7t-Uyc" userLabel="Reviews Tap Gesture Recognizer">
+                    <connections>
+                        <action selector="reviewsOptionAction:" destination="acz-7t-685" id="KZm-sH-NfP"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="3fy-Ta-wWs" userLabel="Trailers Tap Gesture Recognizer">
+                    <connections>
+                        <action selector="trailersOptionAction:" destination="acz-7t-685" id="gNm-aa-amC"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="gE8-bO-WQF" userLabel="Credits Tap Gesture Recognizer">
+                    <connections>
+                        <action selector="creditsOptionAction:" destination="acz-7t-685" id="ydL-q4-QMs"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="R7d-Kq-qp2" userLabel="Similars Tap Gesture Recognizer">
+                    <connections>
+                        <action selector="similarsOptionAction:" destination="acz-7t-685" id="4ul-Xy-0ak"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="115.94202898550725" y="85.714285714285708"/>
         </scene>
