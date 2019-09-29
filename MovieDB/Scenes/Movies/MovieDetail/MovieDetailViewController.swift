@@ -89,10 +89,11 @@ class MovieDetailViewController: UIViewController, Retryable, Transitionable, Se
         backdropImageView.kf.indicatorType = .activity
         backdropImageView.kf.setImage(with: viewModel.backdropURL)
         
-        //posterImageView.kf.indicatorType = .activity
-        //posterImageView.kf.setImage(with: viewModel.posterURL)
+        posterImageView.kf.indicatorType = .activity
+        posterImageView.kf.setImage(with: viewModel.posterURL)
         
-        //voteAverageView.vote
+        voteAverageView.voteValue = viewModel.voteAverage
+        overviewLabel.text = viewModel.overview
     }
     
     // MARK: - Actions

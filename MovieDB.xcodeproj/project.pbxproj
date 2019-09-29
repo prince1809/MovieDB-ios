@@ -73,6 +73,8 @@
 		A3B491FB23406E2D00AB531A /* UIView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B491FA23406E2D00AB531A /* UIView+Layout.swift */; };
 		A3B491FD2340A52A00AB531A /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B491FC2340A52A00AB531A /* UIView+Extensions.swift */; };
 		A3B492002340C8E600AB531A /* Transitionable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B491FF2340C8E600AB531A /* Transitionable.swift */; };
+		A3B49202234104CB00AB531A /* FontHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B49201234104CB00AB531A /* FontHelper.swift */; };
+		A3B49204234109C800AB531A /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B49203234109C800AB531A /* Utils.swift */; };
 		A3C86249232AA364000CF79B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C86248232AA364000CF79B /* AppDelegate.swift */; };
 		A3C8624B232AA364000CF79B /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C8624A232AA364000CF79B /* SplashViewController.swift */; };
 		A3C8624E232AA364000CF79B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3C8624C232AA364000CF79B /* Main.storyboard */; };
@@ -184,6 +186,8 @@
 		A3B491FA23406E2D00AB531A /* UIView+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Layout.swift"; sourceTree = "<group>"; };
 		A3B491FC2340A52A00AB531A /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		A3B491FF2340C8E600AB531A /* Transitionable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transitionable.swift; sourceTree = "<group>"; };
+		A3B49201234104CB00AB531A /* FontHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontHelper.swift; sourceTree = "<group>"; };
+		A3B49203234109C800AB531A /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		A3C86245232AA364000CF79B /* MovieDB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieDB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3C86248232AA364000CF79B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3C8624A232AA364000CF79B /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
@@ -734,6 +738,8 @@
 				A30BFC4D232FD4D0005B02FE /* ViewState.swift */,
 				A3D3D8E32331E7D200BD26B8 /* ColorPalette.swift */,
 				A3D3D8F42332758900BD26B8 /* LocalizationHelper.swift */,
+				A3B49201234104CB00AB531A /* FontHelper.swift */,
+				A3B49203234109C800AB531A /* Utils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -905,6 +911,7 @@
 				A3F6DAB8233A6FC5001E2287 /* PersistenceStore+User.swift in Sources */,
 				A3926332232D14600052238C /* UpcomingMoviesViewController.swift in Sources */,
 				A30BFC16232F0B4C005B02FE /* Managed.swift in Sources */,
+				A3B49204234109C800AB531A /* Utils.swift in Sources */,
 				A3C8624B232AA364000CF79B /* SplashViewController.swift in Sources */,
 				A30BFC25232F5C94005B02FE /* Genre.swift in Sources */,
 				A37DC713233D19B40048FC8A /* SegueHandler.swift in Sources */,
@@ -928,6 +935,7 @@
 				A3F6DAA42339EE63001E2287 /* AuthProvider.swift in Sources */,
 				A3D3D8F32332505B00BD26B8 /* Loadable.swift in Sources */,
 				A30BFC45232F84AB005B02FE /* UICollectionView+Extensions.swift in Sources */,
+				A3B49202234104CB00AB531A /* FontHelper.swift in Sources */,
 				A32D8335232E9117005AB288 /* APIClient.swift in Sources */,
 				A3D3D8DC2331D75100BD26B8 /* Emptiable.swift in Sources */,
 				A30BFC47232F8575005B02FE /* Dequeuable.swift in Sources */,
