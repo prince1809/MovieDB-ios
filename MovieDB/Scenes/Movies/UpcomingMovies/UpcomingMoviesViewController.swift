@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UpcomingMoviesViewController: UIViewController, PlaceholderDisplayable, Loadable {
+class UpcomingMoviesViewController: UIViewController, PlaceholderDisplayable, SegueHandler, Loadable {
     
     @IBOutlet weak var toggleGridBarButtonItem: UIBarButtonItem!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -156,6 +156,18 @@ class UpcomingMoviesViewController: UIViewController, PlaceholderDisplayable, Lo
         })
     }
     
+    // MARK: - Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segueIdentifier(for: segue) {
+        case .movieDetail:
+            guard let viewController = segue.destination as? MovieDetailViewController else { fatalError() }
+            guard let indexPath = sender as? IndexPath else { return }
+            _ = viewController.view
+            viewController.viewModel = viewModel.buildDetailViewModel(atIndex: indexPath.row)
+        }
+    }
+    
     @IBAction func toggleGridAction(_ sender: Any) {
         guard !isAnimatingPresentation else { return }
         switch presentationMode {
@@ -195,7 +207,7 @@ extension UpcomingMoviesViewController: UICollectionViewDelegate {
         navigationManager.configure(selectedFrame: selectedFrame, with: imageToTransition)
         
         viewModel.setSelectedMovie(at: indexPath.row)
-        performSegue(withIdentifier: SegueIndentifier.movieDetail.rawValue, sender: indexPath)
+        performSegue(withIdentifier: SegueIdentifier.movieDetail.rawValue, sender: indexPath)
     }
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
@@ -211,11 +223,11 @@ extension UpcomingMoviesViewController: UICollectionViewDelegate {
 
 extension UpcomingMoviesViewController {
     
-    enum SegueIndentifier: String {
+    enum SegueIdentifier: String {
         case movieDetail = "MovieDetailSegue"
     }
-    
 }
+
 
 // MARK: - Presentation Modes
 

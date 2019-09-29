@@ -58,9 +58,10 @@ extension MoviesViewModel {
         return viewState.value.needsPrefetch
     }
     
-//    func buildDetailViewModel(atIndex index: Int) -> MovieDetailViewModel? {
-//        
-//    }
+    func buildDetailViewModel(atIndex index: Int) -> MovieDetailViewModel? {
+        guard index < movies.count else { return nil }
+        return MovieDetailViewModel(movies[index], managedObjectContext: managedObjectContext)
+    }
     
     func getMovies() {
         let showLoader = viewState.value.isInitialPage
