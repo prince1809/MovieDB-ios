@@ -315,6 +315,9 @@
                         <outlet property="titleLabel" destination="MAD-p9-tcc" id="NEh-RO-4tB"/>
                         <outlet property="transitionContainerView" destination="6fM-yS-1Me" id="ECQ-fK-dgs"/>
                         <outlet property="voteAverageView" destination="Aw1-qd-Q5u" id="ZGO-DG-HAC"/>
+                        <segue destination="EKP-Be-XR6" kind="show" identifier="MovieReviewsSegue" id="POz-xz-QB3"/>
+                        <segue destination="Oqq-JG-Qmi" kind="show" identifier="MovieVideosSegue" id="YB3-Ci-zEN"/>
+                        <segue destination="EGl-rV-fwN" kind="show" identifier="MovieCreditsSegue" id="Zac-ln-8Ej"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z9q-zN-TII" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -340,6 +343,68 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="115.94202898550725" y="85.714285714285708"/>
+        </scene>
+        <!--Movie Reviews View Controller-->
+        <scene sceneID="Htv-Ys-HEY">
+            <objects>
+                <viewController id="EKP-Be-XR6" customClass="MovieReviewsViewController" customModule="MovieDB" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UmU-T3-izH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="C3T-GU-jvA">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="DhO-Sg-GMD"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="uks-Zv-OUE"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jW0-u2-eZP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1135" y="490"/>
+        </scene>
+        <!--Movie Videos View Controller-->
+        <scene sceneID="EpY-Pu-tfI">
+            <objects>
+                <viewController id="Oqq-JG-Qmi" customClass="MovieVideosViewController" customModule="MovieDB" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9hq-yj-C3H">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BgF-SR-Pkf">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="ADL-ug-Mg9"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="UjP-tH-6uA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SNh-7S-me8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1135" y="-319"/>
+        </scene>
+        <!--Movie Credits View Controller-->
+        <scene sceneID="6h0-9f-c2q">
+            <objects>
+                <viewController id="EGl-rV-fwN" customClass="MovieCreditsViewController" customModule="MovieDB" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xdZ-gb-Nhj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="k8X-qn-Ebc"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="82o-eV-wMT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="noM-R3-4zO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1848" y="86"/>
         </scene>
     </scenes>
     <resources>

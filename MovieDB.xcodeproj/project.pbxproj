@@ -102,6 +102,10 @@
 		A3D3D8F7233278DB00BD26B8 /* URLRequest+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D3D8F6233278DB00BD26B8 /* URLRequest+Extensions.swift */; };
 		A3D3D8F923327AD200BD26B8 /* Dictionary+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D3D8F823327AD200BD26B8 /* Dictionary+Extensions.swift */; };
 		A3D3D8FB23327F3400BD26B8 /* TheMovieDb.plist in Resources */ = {isa = PBXBuildFile; fileRef = A3D3D8FA23327F3400BD26B8 /* TheMovieDb.plist */; };
+		A3E593732342495900FD6F92 /* MovieReviewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E593722342495900FD6F92 /* MovieReviewsViewController.swift */; };
+		A3E593752342496C00FD6F92 /* MovieReviewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E593742342496C00FD6F92 /* MovieReviewsViewModel.swift */; };
+		A3E5937823424C3400FD6F92 /* MovieVideosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E5937723424C3400FD6F92 /* MovieVideosViewController.swift */; };
+		A3E5937B23424D4D00FD6F92 /* MovieCreditsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E5937A23424D4D00FD6F92 /* MovieCreditsViewController.swift */; };
 		A3E74CDF232C7A39002D75A3 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E74CDE232C7A39002D75A3 /* UIViewController+Extensions.swift */; };
 		A3F6DAA22339ED9A001E2287 /* RequestTokenResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F6DAA12339ED9A001E2287 /* RequestTokenResult.swift */; };
 		A3F6DAA42339EE63001E2287 /* AuthProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F6DAA32339EE63001E2287 /* AuthProvider.swift */; };
@@ -217,6 +221,10 @@
 		A3D3D8F6233278DB00BD26B8 /* URLRequest+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+Extensions.swift"; sourceTree = "<group>"; };
 		A3D3D8F823327AD200BD26B8 /* Dictionary+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extensions.swift"; sourceTree = "<group>"; };
 		A3D3D8FA23327F3400BD26B8 /* TheMovieDb.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = TheMovieDb.plist; sourceTree = "<group>"; };
+		A3E593722342495900FD6F92 /* MovieReviewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieReviewsViewController.swift; sourceTree = "<group>"; };
+		A3E593742342496C00FD6F92 /* MovieReviewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieReviewsViewModel.swift; sourceTree = "<group>"; };
+		A3E5937723424C3400FD6F92 /* MovieVideosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieVideosViewController.swift; sourceTree = "<group>"; };
+		A3E5937A23424D4D00FD6F92 /* MovieCreditsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCreditsViewController.swift; sourceTree = "<group>"; };
 		A3E74CDE232C7A39002D75A3 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		A3F6DAA12339ED9A001E2287 /* RequestTokenResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestTokenResult.swift; sourceTree = "<group>"; };
 		A3F6DAA32339EE63001E2287 /* AuthProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthProvider.swift; sourceTree = "<group>"; };
@@ -515,7 +523,10 @@
 		A392632F232D14230052238C /* Movies */ = {
 			isa = PBXGroup;
 			children = (
+				A3E5937923424D3900FD6F92 /* MovieCredits */,
+				A3E5937623424C1100FD6F92 /* MovieVideos */,
 				A30BFC1D232F1F91005B02FE /* MoviesViewModel.swift */,
+				A3E593712342493800FD6F92 /* MovieReviews */,
 				A3926335232D18630052238C /* SearchMovies */,
 				A3926330232D14300052238C /* UpcomingMovies */,
 				A344B741233F0DB2007836A9 /* MovieDetail */,
@@ -660,6 +671,31 @@
 				A3D3D8EA233230DA00BD26B8 /* CollectionViewCellAnimator.swift */,
 			);
 			path = Animations;
+			sourceTree = "<group>";
+		};
+		A3E593712342493800FD6F92 /* MovieReviews */ = {
+			isa = PBXGroup;
+			children = (
+				A3E593722342495900FD6F92 /* MovieReviewsViewController.swift */,
+				A3E593742342496C00FD6F92 /* MovieReviewsViewModel.swift */,
+			);
+			path = MovieReviews;
+			sourceTree = "<group>";
+		};
+		A3E5937623424C1100FD6F92 /* MovieVideos */ = {
+			isa = PBXGroup;
+			children = (
+				A3E5937723424C3400FD6F92 /* MovieVideosViewController.swift */,
+			);
+			path = MovieVideos;
+			sourceTree = "<group>";
+		};
+		A3E5937923424D3900FD6F92 /* MovieCredits */ = {
+			isa = PBXGroup;
+			children = (
+				A3E5937A23424D4D00FD6F92 /* MovieCreditsViewController.swift */,
+			);
+			path = MovieCredits;
 			sourceTree = "<group>";
 		};
 		A3E74CDD232C79C1002D75A3 /* Extensions */ = {
@@ -914,6 +950,7 @@
 				A3B49204234109C800AB531A /* Utils.swift in Sources */,
 				A3C8624B232AA364000CF79B /* SplashViewController.swift in Sources */,
 				A30BFC25232F5C94005B02FE /* Genre.swift in Sources */,
+				A3E5937823424C3400FD6F92 /* MovieVideosViewController.swift in Sources */,
 				A37DC713233D19B40048FC8A /* SegueHandler.swift in Sources */,
 				A3F6DAB0233A0BDC001E2287 /* ProfileOptions.swift in Sources */,
 				A30BFC41232F825A005B02FE /* UpcomingMovieCellViewModel.swift in Sources */,
@@ -931,6 +968,7 @@
 				A32D8329232E4F2C005AB288 /* ShrinkingButton.swift in Sources */,
 				A3F6DAA22339ED9A001E2287 /* RequestTokenResult.swift in Sources */,
 				A37DC711233D10540048FC8A /* UITableView+Extensions.swift in Sources */,
+				A3E593732342495900FD6F92 /* MovieReviewsViewController.swift in Sources */,
 				A30BFC13232F0A27005B02FE /* User.swift in Sources */,
 				A3F6DAA42339EE63001E2287 /* AuthProvider.swift in Sources */,
 				A3D3D8F32332505B00BD26B8 /* Loadable.swift in Sources */,
@@ -978,9 +1016,11 @@
 				A344B743233F0DDE007836A9 /* MovieDetailViewController.swift in Sources */,
 				A3D3D8F52332758900BD26B8 /* LocalizationHelper.swift in Sources */,
 				A3F6DAB4233A1A78001E2287 /* List.swift in Sources */,
+				A3E593752342496C00FD6F92 /* MovieReviewsViewModel.swift in Sources */,
 				A30BFC18232F171B005B02FE /* NSManagedObjectContext+Extensions.swift in Sources */,
 				A3D3D8CF2331C27700BD26B8 /* PlaceholderDisplayable.swift in Sources */,
 				A360F08A233E5F7E00E3CF54 /* AuthPermissionViewModel.swift in Sources */,
+				A3E5937B23424D4D00FD6F92 /* MovieCreditsViewController.swift in Sources */,
 				A3B491FD2340A52A00AB531A /* UIView+Extensions.swift in Sources */,
 				A30BFC1A232F1846005B02FE /* CodingUserInfoKey+Context.swift in Sources */,
 				A3D3D8F923327AD200BD26B8 /* Dictionary+Extensions.swift in Sources */,

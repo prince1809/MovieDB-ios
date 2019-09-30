@@ -25,6 +25,11 @@ class MovieDetailViewController: UIViewController, Retryable, Transitionable, Se
         return barButtonItem
     }()
     
+    lazy var favoriteBarButtonItem: UIBarButtonItem = {
+        let barButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "FavoriteOff"), style: .plain, target: self, action: #selector(favoriteButtonAction(_:)))
+        return barButtonItem
+    }()
+    
     var loaderView: RadarView!
     
     var viewModel: MovieDetailViewModel? {
@@ -64,19 +69,30 @@ class MovieDetailViewController: UIViewController, Retryable, Transitionable, Se
     private func setupNavigationBar() {
         let backItem = UIBarButtonItem(title: "", style: .done, target: nil, action: nil)
         navigationItem.backBarButtonItem = backItem
-        navigationItem.rightBarButtonItems =  []
+        navigationItem.rightBarButtonItems =  [shareBarButtonItem, favoriteBarButtonItem]
     }
     
     private func configureNavigationBar(isFavorite: Bool?) {
         if let isFavorite = isFavorite {
-            //favoriteBar
+            favoriteBarButtonItem.image = isFavorite ?  #imageLiteral(resourceName: "FavoriteOn") : #imageLiteral(resourceName: "FavoriteOff")
+            navigationItem.rightBarButtonItems = [shareBarButtonItem, favoriteBarButtonItem]
+        } else {
+            navigationItem.rightBarButtonItems = [shareBarButtonItem]
         }
+    }
+    
+    private func showErrorView(error: Error) {
+        //present
     }
     
     // MARK: - Reactive Behaviour
     
     private func setupBindables() {
         setupViewBindables()
+        setupLoaderBindable()
+        setupErrorBindables()
+        setupFavoriteBindables()
+        viewModel?.getMovieDetail()
     }
     
     private func setupViewBindables() {
@@ -96,6 +112,37 @@ class MovieDetailViewController: UIViewController, Retryable, Transitionable, Se
         overviewLabel.text = viewModel.overview
     }
     
+    private func setupLoaderBindable() {
+        viewModel?.startLoading.bind({ [weak self] start in
+            start ? self?.showLoader() : self?.hideLoader()
+        })
+        viewModel?.updateMovieDetail = { [weak self] in
+            self?.setupViewBindables()
+            //self?.hideErrorView()
+        }
+    }
+    
+    private func setupErrorBindables() {
+        viewModel?.showErrorView.bind({ [weak self] error in
+            guard let error = error else { return }
+            self?.showErrorView(error: error)
+        })
+    }
+    
+    private func setupFavoriteBindables() {
+        viewModel?.isFavorite.bind({ [weak self] isFavorite in
+            guard let strongSelf = self else { return }
+            strongSelf.configureNavigationBar(isFavorite: isFavorite)
+        })
+    }
+    
+    
+    // MARK: - Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+    }
+    
     // MARK: - Actions
     
     @IBAction func shareBarButtonAction(_ sender: Any) {
@@ -106,7 +153,7 @@ class MovieDetailViewController: UIViewController, Retryable, Transitionable, Se
     }
     
     @IBAction func favoriteButtonAction(_ sender: Any) {
-        //viewModel?.
+        //viewModel?.han
     }
     
     @IBAction func reviewsOptionAction(_ sender: Any) {
@@ -135,7 +182,7 @@ extension MovieDetailViewController {
     
     enum SegueIdentifier: String {
         case movieVideos = "MovieVideosSegue"
-        case movieReviews = "MovieReviewSegue"
+        case movieReviews = "MovieReviewsSegue"
         case movieSimilars = "MovieSimilarsSegue"
         case movieCredits = "MovieCreditsSegue"
     }

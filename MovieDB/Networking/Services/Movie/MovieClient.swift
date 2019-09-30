@@ -47,4 +47,15 @@ class MovieClient: APIClient {
             return MovieProvider.getSimilars(page: page, id: movieId).request
         }
     }
+    
+    // MARK: - Movie Detail
+    
+    func getMovieDetail(_ context: NSManagedObjectContext, with movieId: Int, completion: @escaping (Result<Movie, APIError>) -> Void) {
+        fetch(with: MovieProvider.getDetail(id: movieId).request,
+              context: context,
+              decode: { json -> Movie? in
+                guard let movie = json as? Movie else { return nil }
+                return movie
+        },completion: completion)
+    }
 }

@@ -15,6 +15,12 @@ final class MovieDetailViewModel {
     //private var movieVisitStore: PersistenceStore<MovieVisit>!
     
     
+    private var accountClient = AccountClient()
+    private var movieClient = MovieClient()
+    
+    private var authManager = AuthenticationManager.shared
+    
+    
     var id: Int!
     var title: String!
     var genre: String?
@@ -64,6 +70,44 @@ final class MovieDetailViewModel {
     }
     
     private func setupStores(_ managedObjectContext: NSManagedObjectContext) {
-       // movieSto
+        // movieSto
     }
+    
+    
+    // MARK: - Networking
+    
+    func getMovieDetail() {
+        
+    }
+    
+    func refreshMovieDetail() {
+        
+    }
+    
+    private func fetchMovieDetail(showLoader: Bool = true) {
+        guard needsFetch else { return }
+        startLoading.value = showLoader
+        movieClient.getMovieDetail(managedObjectContext, with: id, completion: { result in
+            switch result {
+            case .success(let movie):
+                self.setupMovie(movie)
+            case .failure(let error):
+                self.startLoading.value = false
+                print(error)
+            }
+        })
+    }
+    
+    func saveVisitedMovie() {
+        
+    }
+    
+    
+    // MARK: - User Authentication
+    
+    // MARK: Favorites
+    
+    //private func 
+    
+    // MARK: Views Models Building
 }

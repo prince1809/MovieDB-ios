@@ -10,4 +10,8 @@ import UIKit
 
 class ErrorPlaceholderView: UIView {
     
+    
+    var isPresented: Bool = false
+    var retry: (() -> Void)?
+    
 }
