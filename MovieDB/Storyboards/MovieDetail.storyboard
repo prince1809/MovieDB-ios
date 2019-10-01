@@ -8,6 +8,22 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Movie Credits View Controller-->
+        <scene sceneID="m4Y-4n-puc">
+            <objects>
+                <viewController id="IvV-zY-tgc" customClass="MovieCreditsViewController" customModule="MovieDB" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Uen-Wr-Far">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="vXc-gd-rY2"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="nC6-SB-Vwp"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kPq-eH-yoz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1877" y="86"/>
+        </scene>
         <!--MovieDetailViewController-->
         <scene sceneID="OYP-qF-VR5">
             <objects>
@@ -317,7 +333,8 @@
                         <outlet property="voteAverageView" destination="Aw1-qd-Q5u" id="ZGO-DG-HAC"/>
                         <segue destination="EKP-Be-XR6" kind="show" identifier="MovieReviewsSegue" id="POz-xz-QB3"/>
                         <segue destination="Oqq-JG-Qmi" kind="show" identifier="MovieVideosSegue" id="YB3-Ci-zEN"/>
-                        <segue destination="EGl-rV-fwN" kind="show" identifier="MovieCreditsSegue" id="Zac-ln-8Ej"/>
+                        <segue destination="IvV-zY-tgc" kind="show" identifier="MovieCreditsSegue" id="qGd-2E-at4"/>
+                        <segue destination="ykv-Vu-2QI" kind="show" identifier="MovieSimilarsSegue" id="opC-hK-Zzc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z9q-zN-TII" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -344,6 +361,16 @@
             </objects>
             <point key="canvasLocation" x="115.94202898550725" y="85.714285714285708"/>
         </scene>
+        <!--MovieListViewController-->
+        <scene sceneID="I31-S2-UmI">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MovieList" referencedIdentifier="MovieListViewController" id="ykv-Vu-2QI" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Oo6-Z0-gkA"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wQj-iG-DJ3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="149" y="536"/>
+        </scene>
         <!--Movie Reviews View Controller-->
         <scene sceneID="Htv-Ys-HEY">
             <objects>
@@ -365,7 +392,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jW0-u2-eZP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1135" y="490"/>
+            <point key="canvasLocation" x="1006" y="467"/>
         </scene>
         <!--Movie Videos View Controller-->
         <scene sceneID="EpY-Pu-tfI">
@@ -388,23 +415,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SNh-7S-me8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1135" y="-319"/>
-        </scene>
-        <!--Movie Credits View Controller-->
-        <scene sceneID="6h0-9f-c2q">
-            <objects>
-                <viewController id="EGl-rV-fwN" customClass="MovieCreditsViewController" customModule="MovieDB" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="xdZ-gb-Nhj">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="k8X-qn-Ebc"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="82o-eV-wMT"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="noM-R3-4zO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1848" y="86"/>
+            <point key="canvasLocation" x="1006" y="-285"/>
         </scene>
     </scenes>
     <resources>
