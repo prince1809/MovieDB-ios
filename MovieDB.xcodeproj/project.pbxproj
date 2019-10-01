@@ -127,6 +127,7 @@
 		A3FA2EB223439462004654B5 /* MovieCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3FA2EB123439462004654B5 /* MovieCellViewModel.swift */; };
 		A3FA2EB523439514004654B5 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3FA2EB323439514004654B5 /* MovieTableViewCell.swift */; };
 		A3FA2EB623439514004654B5 /* MovieTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3FA2EB423439514004654B5 /* MovieTableViewCell.xib */; };
+		A3FA2EB92343A72F004654B5 /* TableViewCellAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3FA2EB82343A72F004654B5 /* TableViewCellAnimator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -252,6 +253,7 @@
 		A3FA2EB123439462004654B5 /* MovieCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCellViewModel.swift; sourceTree = "<group>"; };
 		A3FA2EB323439514004654B5 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		A3FA2EB423439514004654B5 /* MovieTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieTableViewCell.xib; sourceTree = "<group>"; };
+		A3FA2EB82343A72F004654B5 /* TableViewCellAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellAnimator.swift; sourceTree = "<group>"; };
 		C526646594D7530E03AFE708 /* Pods-MovieDB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieDB.release.xcconfig"; path = "Pods/Target Support Files/Pods-MovieDB/Pods-MovieDB.release.xcconfig"; sourceTree = "<group>"; };
 		CCA54E77E5A184C7CE2D9BFD /* Pods_MovieDB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovieDB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -684,6 +686,7 @@
 			isa = PBXGroup;
 			children = (
 				A3D3D8EA233230DA00BD26B8 /* CollectionViewCellAnimator.swift */,
+				A3FA2EB82343A72F004654B5 /* TableViewCellAnimator.swift */,
 			);
 			path = Animations;
 			sourceTree = "<group>";
@@ -981,6 +984,7 @@
 				A32D833E232E9450005AB288 /* AuthenticationManager.swift in Sources */,
 				A3D3D8EB233230DA00BD26B8 /* CollectionViewCellAnimator.swift in Sources */,
 				A3F6DAB8233A6FC5001E2287 /* PersistenceStore+User.swift in Sources */,
+				A3FA2EB92343A72F004654B5 /* TableViewCellAnimator.swift in Sources */,
 				A3926332232D14600052238C /* UpcomingMoviesViewController.swift in Sources */,
 				A30BFC16232F0B4C005B02FE /* Managed.swift in Sources */,
 				A3B49204234109C800AB531A /* Utils.swift in Sources */,
