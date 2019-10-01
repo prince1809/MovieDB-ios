@@ -12,6 +12,7 @@ class MovieListViewController: UIViewController, Loadable {
     
     @IBOutlet weak var tableView: UITableView!
     
+    //private var dataSource: SimpleTab
     private var displayedCellsIndexPaths = Set<IndexPath>()
     
     var loaderView: RadarView!
@@ -45,6 +46,10 @@ class MovieListViewController: UIViewController, Loadable {
                                                          backgroundColor: tableView.backgroundColor, refreshHandler: { [weak self] in
                                                             self?.viewModel?.refreshMovies()
         })
+    }
+    
+    private func reloadTableView() {
+        
     }
     
     // MARK: - Reactive Behaviour

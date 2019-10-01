@@ -128,6 +128,7 @@
 		A3FA2EB523439514004654B5 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3FA2EB323439514004654B5 /* MovieTableViewCell.swift */; };
 		A3FA2EB623439514004654B5 /* MovieTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3FA2EB423439514004654B5 /* MovieTableViewCell.xib */; };
 		A3FA2EB92343A72F004654B5 /* TableViewCellAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3FA2EB82343A72F004654B5 /* TableViewCellAnimator.swift */; };
+		A3FA2EBC2343B89C004654B5 /* SimpleTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3FA2EBB2343B89C004654B5 /* SimpleTableViewDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -254,6 +255,7 @@
 		A3FA2EB323439514004654B5 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		A3FA2EB423439514004654B5 /* MovieTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieTableViewCell.xib; sourceTree = "<group>"; };
 		A3FA2EB82343A72F004654B5 /* TableViewCellAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellAnimator.swift; sourceTree = "<group>"; };
+		A3FA2EBB2343B89C004654B5 /* SimpleTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTableViewDataSource.swift; sourceTree = "<group>"; };
 		C526646594D7530E03AFE708 /* Pods-MovieDB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieDB.release.xcconfig"; path = "Pods/Target Support Files/Pods-MovieDB/Pods-MovieDB.release.xcconfig"; sourceTree = "<group>"; };
 		CCA54E77E5A184C7CE2D9BFD /* Pods_MovieDB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovieDB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -668,6 +670,7 @@
 		A3D3D8E523322E9A00BD26B8 /* DataSources */ = {
 			isa = PBXGroup;
 			children = (
+				A3FA2EBA2343B887004654B5 /* TableView Data Sources */,
 				A3D3D8E623322EA800BD26B8 /* CollectionView Data Sources */,
 			);
 			path = DataSources;
@@ -823,6 +826,14 @@
 				A3FA2EB423439514004654B5 /* MovieTableViewCell.xib */,
 			);
 			path = MovieList;
+			sourceTree = "<group>";
+		};
+		A3FA2EBA2343B887004654B5 /* TableView Data Sources */ = {
+			isa = PBXGroup;
+			children = (
+				A3FA2EBB2343B89C004654B5 /* SimpleTableViewDataSource.swift */,
+			);
+			path = "TableView Data Sources";
 			sourceTree = "<group>";
 		};
 		C83A96A3CF842BE9EC91962E /* Frameworks */ = {
@@ -983,6 +994,7 @@
 				A3D3D8F7233278DB00BD26B8 /* URLRequest+Extensions.swift in Sources */,
 				A32D833E232E9450005AB288 /* AuthenticationManager.swift in Sources */,
 				A3D3D8EB233230DA00BD26B8 /* CollectionViewCellAnimator.swift in Sources */,
+				A3FA2EBC2343B89C004654B5 /* SimpleTableViewDataSource.swift in Sources */,
 				A3F6DAB8233A6FC5001E2287 /* PersistenceStore+User.swift in Sources */,
 				A3FA2EB92343A72F004654B5 /* TableViewCellAnimator.swift in Sources */,
 				A3926332232D14600052238C /* UpcomingMoviesViewController.swift in Sources */,
