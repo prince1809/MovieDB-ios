@@ -9,6 +9,12 @@
 import UIKit
 
 class MovieVideosViewController: UIViewController {
+    
+    var viewModel: MovieVideosViewModel? {
+        didSet {
+            
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

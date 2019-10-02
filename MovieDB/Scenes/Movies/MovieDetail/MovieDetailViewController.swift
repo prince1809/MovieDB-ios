@@ -144,7 +144,11 @@ class MovieDetailViewController: UIViewController, Retryable, Transitionable, Se
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         navigationController?.delegate = nil
         switch segueIdentifier(for: segue) {
-        case .movieVideos, .movieCredits, .movieReviews:
+        case .movieVideos:
+            guard let viewController = segue.destination as? MovieVideosViewController else { fatalError() }
+            _ = viewController.view
+            viewController.viewModel = viewModel?.buildVideosViewModel()
+        case .movieCredits, .movieReviews:
             guard let viewController = segue.destination as? MovieListViewController else { fatalError() }
         case .movieSimilars:
             guard let viewController = segue.destination as? MovieListViewController else { fatalError() }
