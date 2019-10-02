@@ -110,4 +110,12 @@ final class MovieDetailViewModel {
     //private func 
     
     // MARK: Views Models Building
+    
+//    func buildVideosViewModel() -> MovieVideoViewModel {
+//
+//    }
+    
+    func buildSimilarsViewModel() -> MovieListViewModel {
+        return MovieListViewModel(filter: .similar(movieId: id), managedObjectContext: managedObjectContext)
+    }
 }

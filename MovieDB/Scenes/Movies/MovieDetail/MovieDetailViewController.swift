@@ -82,7 +82,9 @@ class MovieDetailViewController: UIViewController, Retryable, Transitionable, Se
     }
     
     private func showErrorView(error: Error) {
-        //present
+        presentErrorView(with: error.localizedDescription, errorHandler: { [weak self] in
+            self?.viewModel?.refreshMovieDetail()
+        })
     }
     
     // MARK: - Reactive Behaviour
@@ -140,7 +142,15 @@ class MovieDetailViewController: UIViewController, Retryable, Transitionable, Se
     // MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+        navigationController?.delegate = nil
+        switch segueIdentifier(for: segue) {
+        case .movieVideos, .movieCredits, .movieReviews:
+            guard let viewController = segue.destination as? MovieListViewController else { fatalError() }
+        case .movieSimilars:
+            guard let viewController = segue.destination as? MovieListViewController else { fatalError() }
+            _ = viewController.view
+            viewController.viewModel = viewModel?.buildSimilarsViewModel()
+        }
     }
     
     // MARK: - Actions
