@@ -50,5 +50,5 @@ extension SimpleCollectionViewDataSource where ViewModel == UpcomingMovieCellVie
                                                 cell.viewModel = viewModel
         })
     }
-    
 }
+

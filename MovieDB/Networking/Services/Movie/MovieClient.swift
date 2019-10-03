@@ -58,4 +58,13 @@ class MovieClient: APIClient {
                 return movie
         },completion: completion)
     }
+    
+    // MARK: - Movie videos
+    
+    func getMovieVideos(with movieId: Int, completion: @escaping (Result<VideoResult?, APIError>) -> Void) {
+        fetch(with: MovieProvider.getVideos(id: movieId).request, decode: { json -> VideoResult? in
+            guard let videoResult = json as? VideoResult else { return nil }
+            return videoResult
+        }, completion: completion)
+    }
 }

@@ -50,3 +50,17 @@ extension SimpleTableViewDataSource where ViewModel == MovieCellViewModel {
         })
     }
 }
+
+extension SimpleTableViewDataSource where ViewModel == MovieVideoCellViewModel {
+    
+    static func make(for cellViewModels: [ViewModel],
+                     reuseIdentifier: String = MovieVideoTableViewCell.dequeuIdentifier) -> SimpleTableViewDataSource {
+        return SimpleTableViewDataSource(cellViewModels: cellViewModels,
+                                         reuseIdentifier: reuseIdentifier,
+                                         cellConfigurator: { (viewModel, cell) in
+                                            let cell = cell as! MovieVideoTableViewCell
+                                            cell.viewModel = viewModel
+        })
+    }
+    
+}

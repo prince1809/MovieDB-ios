@@ -15,11 +15,17 @@ final class MovieVideosViewModel {
     
     
     var movieClient = MovieClient()
-    //let viewState: Bindable<SimpleViewState<Video>> = Bindable(.initial)
+    let viewState: Bindable<SimpleViewState<Video>> = Bindable(.initial)
     
     var startLoading: Bindable<Bool> = Bindable(false)
     
-    //var videoCalls: [MovieVideoCellViewModel]
+    var videoCells: [MovieVideoCellViewModel] {
+        return videos.map { MovieVideoCellViewModel($0) }
+    }
+    
+    private var videos: [Video] {
+        return viewState.value.currentEntities
+    }
     
     // MARK: - Initializers
     
@@ -32,5 +38,30 @@ final class MovieVideosViewModel {
     
     func playVideo(at index: Int) {
         
+    }
+    
+    // MARK: - Networking
+    
+    func getMovieVideos(showLoader: Bool = false) {
+        startLoading.value = showLoader
+        movieClient.getMovieVideos(with: movieId) { result in
+            switch result {
+            case .success(let videoResult):
+                guard let videoResult = videoResult else { return }
+                self.processVideoResult(videoResult)
+            case .failure(let error):
+                self.viewState.value = .error(error)
+            }
+        }
+    }
+    
+    private func processVideoResult(_ videoResult: VideoResult) {
+        startLoading.value = false
+        let fetchedVideos = videoResult.results
+        if fetchedVideos.isEmpty {
+            viewState.value = .empty
+        } else {
+            viewState.value = .populated(fetchedVideos)
+        }
     }
 }
